@@ -1,11 +1,13 @@
 ---
-name: support-event
+name: Support event
 about: Track a support event that occurred elsewhere
 title: ''
 labels: support-tracker
 assignees: ''
 
 ---
+
+> The information in this issue will be public. If the support event occurred on a private channel, do not include identifying information without explicit consent!
 
 Origin: <link|description where/when/how the event took place>
 
