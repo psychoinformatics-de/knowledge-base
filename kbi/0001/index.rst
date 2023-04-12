@@ -1,23 +1,22 @@
 .. index::
    single: clone; multiple users
 
-KBI0001: Shared git repositories
-================================
+KBI0001: Shared (multi-user) Git clones
+=======================================
 
 :authors: Michał Szczepanik <m.szczepanik@fz-juelich.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/1
 :keywords: shared, clone, safe.directory
 
 Overview
 --------
 
-Some users who want to clone DataLad repositories owned by other users
+Some users who want to clone Git repositories (DataLad datasets) from locations on a machine that are owned by other users
 report receiving an error message saying that they should consider
 setting a ``safe.directory`` git config option (possibly affects only
 cloning from checked-out datasets, not sure about bare repositories
 created as part of RIA). This technical note provides background
-information about the observed behavior, and should help users resolve
-the issue.
+information about the observed behavior, and guidance on possible solutions.
 
 Git version 2.35.2 introduced checks for the top-level directory
 ownership, and a ``safe.directory`` config option to to bypass these
