@@ -1,5 +1,6 @@
 .. index::
    single: clone; multiple users
+.. highlight:: text
 
 KBI0001: Shared (multi-user) Git clones
 =======================================
@@ -12,11 +13,25 @@ Overview
 --------
 
 Some users who want to clone Git repositories (DataLad datasets) from locations on a machine that are owned by other users
-report receiving an error message saying that they should consider
-setting a ``safe.directory`` git config option (possibly affects only
-cloning from checked-out datasets, not sure about bare repositories
-created as part of RIA). This technical note provides background
-information about the observed behavior, and guidance on possible solutions.
+report receiving an error message saying::
+
+   fatal: unsafe repository ('/path/to/repository' is owned by someone
+   else)
+
+or::
+
+   Git refuses to operate in this repository, probably because it is
+   owned by someone else.
+
+The error message comes from Git and also contains the following
+suggestion::
+
+   To add an exception for this directory, call:
+
+	git config --global --add safe.directory /path/to/repository
+
+This technical note provides background information about the observed
+behavior, and guidance on possible solutions.
 
 Git version 2.35.2 introduced checks for the top-level directory
 ownership, and a ``safe.directory`` config option to to bypass these
