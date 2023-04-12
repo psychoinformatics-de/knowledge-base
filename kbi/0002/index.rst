@@ -5,12 +5,12 @@ KBI0002: Represent a Dataverse dataset as a DataLad dataset
 ===========================================================
 
 :authors: Michael Hanke <michael.hanke@gmail.com>
-:discussion:
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/9
 :keywords: addurls, datalad-dataverse
 
-The `Dataverse extension package`_ equips DataLad with the ability to deposit
+The `Dataverse extension package`_ equips DataLad with the ability to deposit DataLad datasets
 on Dataverse_ and later retrieve such DataLad datasets from Dataverse again.
-However, if a dataset has been deposited on Dataverse already, there is no
+However, if a non-DataLad dataset has been deposited on Dataverse already, there is no
 convenient command provided that can generate a DataLad dataset from such a
 deposit automatically. At the same time, it can be useful to nevertheless
 have such a DataLad dataset, for example, to be able to declare a (versioned)
@@ -22,7 +22,7 @@ Requirements
 
 The solution described here requires DataLad (tested with v0.18), and the
 `Dataverse extension package`_ (tested with v1.0). In principle, this can also
-be down with the `pyDataverse package`_ directly, but this has not been tested.
+be done with the `pyDataverse package`_ directly, but this has not been tested.
 
 
 Solution
@@ -49,6 +49,7 @@ The PID can be found in the "Metadata" tab of the dataset's page on Dataverse.
 
 An example script call looks like::
 
+   # needs to be using the `set` command on Windows
    $ export DATAVERSE_API_TOKEN=99ad0817-....-....-....-279a39346c70
    $ python <path-to-script> 'https://dataverse.example.com' 'doi:10.26165/...'
 
