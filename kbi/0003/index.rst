@@ -1,5 +1,4 @@
-.. index::
-   single: datalad run; unlock
+.. index:: datalad; run, datalad; unlock
 .. highlight:: text
 
 KBI0003: Capturing interactive computations in Jupyter Notebooks
