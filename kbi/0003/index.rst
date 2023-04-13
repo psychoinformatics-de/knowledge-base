@@ -5,7 +5,7 @@ KBI0003: Capturing interactive computations in Jupyter Notebooks
 ================================================================
 
 :authors: Adina Wagner <a.wagner@fz-juelich.de>
-:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/1
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/17
 :keywords: datalad run, run, unlock
 
 This knowledge-base item discusses how wrap interactive computing with
