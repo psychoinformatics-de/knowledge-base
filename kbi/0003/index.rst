@@ -35,7 +35,7 @@ and it can unlock relevant files at the start if the user adds an
 ``--output`` specification to it.
 
 
-Consider a dataset with an annexed file that will be modified in a
+Consider a dataset with an annexed file (``output.file``) that will be modified in a
 notebook session:
 
 .. code-block:: bash
@@ -43,9 +43,9 @@ notebook session:
     ❱ datalad create mynotebookenv
     create(ok): /tmp/mynotebookenv (dataset)
     ❱ cd mynotebookenv
-    ❱ echo 123456 > file
+    ❱ echo 123456 > output.file
     ❱ datalad save -m "annexed something"
-    add(ok): file (file)
+    add(ok): output.file (file)
     save(ok): . (dataset)
     action summary:
       add (ok: 1)
@@ -60,15 +60,15 @@ the annexed file:
 
     ❱ datalad run \
      -m "running jupyter notebook" \
-     --output file "jupyter-notebook"
-    unlock(ok): file (file)
+     --output output.file "jupyter-notebook"
+    unlock(ok): output.file (file)
     ...
     [Notebook logmessages]
     ...
     [INFO   ] == Command exit (modification check follows) =====
     run(ok): /tmp/mynotebookenv (dataset) [jupyter-notebook]
     add(ok): Untitled.ipynb (file)
-    add(ok): file (file)
+    add(ok): output.file (file)
     save(ok): . (dataset)
 
 This process will also work if the data to be unlocked or the Notebook
@@ -84,13 +84,13 @@ Here is an example with a subdataset that contains one annexed file:
    ❱ datalad create super && \
    cd super && \
    datalad create -d sub && \
-   echo 1234 > file && \
+   echo 1234 > output.file && \
    datalad save -m "annex something"
    create(ok): /tmp/super (dataset)
    create(ok): . (dataset)
    add(ok): sub (dataset)
    add(ok): .gitmodules (file)
-   add(ok): file (file)
+   add(ok): output.file (file)
    save(ok): . (dataset)
    action summary:
      add (ok: 3)
@@ -102,16 +102,16 @@ We can modify content in the subdataset as long as the command is run from the a
 
    ❱ datalad run \
    -m "running jupyter notebook to modify subdataset content" \
-   --output sub/file \
+   --output sub/output.file \
    "jupyter-notebook Untitled.ipynb"
-   unlock(ok): sub/file (file)
+   unlock(ok): sub/output.file (file)
    [INFO   ] == Command start (output follows) =====
 
    [Notebook log output]
 
    [INFO   ] == Command exit (modification check follows) =====
    run(ok): /tmp/super (dataset) [jupyter-notebook Untitled.ipynb]
-   add(ok): file (file)
+   add(ok): output.file (file)
    save(ok): sub (dataset)
    add(ok): sub (dataset)
    add(ok): .gitmodules (file)
@@ -124,25 +124,25 @@ It would not work if the ``--output`` specification points outside of the datase
    ❱ datalad create super && \
    cd super && \
    datalad create -d sub && \
-   echo 1234 > file && \
+   echo 1234 > output.file && \
    datalad save -m "annex something"
     create(ok): /tmp/super (dataset)
     create(ok): . (dataset)
     add(ok): sub (dataset)
     add(ok): .gitmodules (file)
-    add(ok): file (file)
+    add(ok): output.file (file)
     save(ok): . (dataset)
     action summary:
       add (ok: 3)
       save (ok: 1)
    ❱ tree
    .
-   ├── file -> .git/annex/objects/kj/05/MD5E-s5--e7df7cd2ca07f4f1ab415d457a6e1c13/MD5E-s5--e7df7cd2ca07f4f1ab415d457a6e1c13
+   ├── output.file -> .git/annex/objects/kj/05/MD5E-s5--e7df7cd2ca07f4f1ab415d457a6e1c13/MD5E-s5--e7df7cd2ca07f4f1ab415d457a6e1c13
    └── sub
 
    ❱ cd sub
    ❱ datalad run \
     -m "running jupyter notebook from subdataset" \
-    --output ../file \
+    --output ../output.file \
     "jupyter-notebook"
    get(error): .. [path not associated with dataset Dataset(/tmp/super/sub)]
