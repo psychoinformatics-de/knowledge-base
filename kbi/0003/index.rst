@@ -34,6 +34,24 @@ shuts down the Jupyter server orderly via the "Quit" button,
 and it can unlock relevant files at the start if the user adds an
 ``--output`` specification to it.
 
+If the notebook is in a state where it can be ran from start to end
+(i.e., no manual step-by-step execution of individual code cells),
+the entire notebook can be run at once using the
+`command  <https://docs.jupyter.org/en/latest/running.html#using-a-command-line-interface>`_
+``jupyter run <notebook>``.
+In this execution mode, the ``jupyter run <notebook>`` call can be
+wrapped in a ``datalad run`` like this:
+
+.. code-block:: bash
+
+   ❱ datalad run \
+     -m "running my notebook" \
+     --output <path/to/file/getting/modified> \
+     "jupyter run <my-notebook>"
+
+If the computation involves manual execution of certain cells, and
+the jupyter server is ran for interactive computations, the entire
+session can be wrapped as follows:
 
 Consider a dataset with an annexed file (``output.file``) that will be modified in a
 notebook session:
