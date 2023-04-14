@@ -9,7 +9,7 @@ KBI0004: Why do files move to .git/annex/objects when converting an existing dir
 :keywords: datalad faq, git-annex faq, .git/annex/object, symlink, link
 
 This knowledge-base item explains why files are moved into ``.git/annex/objects``, when
-a DataLad dataset is created from an existing dataset, or when a dataset with new files
+a DataLad dataset is created from an existing directory, or when a dataset with new files
 is saved.
 
 
