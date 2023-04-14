@@ -39,7 +39,7 @@ dataset very flexibld. You can for example share the dataset (``git`` repository
 safe on your cluster. People can then access the dataset (with ``datalad clone``) and download individual files in the
 dataset (with ``datalad get``) if they have access credentials for that location on your cluster.
 
-However, you can use configurations to specify how datalad should commit/manage your data. You might want to commit all
+However, you can use configurations to specify how DataLad should commit/manage your data. You might want to commit all
 your files to ``git`` (unless they are large, too numerous, or unless you don't want to make them available to
 everybody who clones the ``git`` repository). You could also let every file be managed by ``git-annex``. Usually only
 large binary files will be managed by ``git-annex`` by default.
