@@ -1,4 +1,4 @@
-.. index:: datalad; faq, datalad; annex, datalad git-annex,
+.. index:: datalad; annex, git-annex,
 .. highlight:: text
 
 KBI0004: Why do files move to .git/annex/objects when converting an existing directory into a DataLad dataset?
