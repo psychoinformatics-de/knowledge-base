@@ -1,8 +1,8 @@
 .. index:: datalad; faq, datalad; annex, datalad git-annex,
 .. highlight:: text
 
-KBI0004: FAQ: is it normal that files are moved to .git/annex/objects when converting existing data into a DataLad dataset?
-===========================================================================================================================
+KBI0004: Why do files move to .git/annex/objects when converting an existing directory into a DataLad dataset?
+==============================================================================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com> Christian Mönch <christian.moench@web.de>
 :discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/9
