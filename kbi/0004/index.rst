@@ -4,7 +4,7 @@
 KBI0004: Why do files move to .git/annex/objects when converting an existing directory into a DataLad dataset?
 ==============================================================================================================
 
-:authors: Stephan Heunis <jsheunis@gmail.com> Christian Mönch <christian.moench@web.de>
+:authors: Stephan Heunis <jsheunis@gmail.com>, Christian Mönch <christian.moench@web.de>
 :discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/9
 :keywords: datalad faq, git-annex faq, .git/annex/object, symlink, link
 
