@@ -37,7 +37,7 @@ the content will remain in the original path. This symbolic link will be tracked
 The separation of version management (done by ``git``) and content management (done by ``git-annex``)) make a DataLad
 dataset very flexibld. You can for example share the dataset (``git`` repository) publicly, while keeping the contents
 safe on your cluster. People can then access the dataset (with ``datalad clone``) and download individual files in the
-dataset (with ``datalad get``) if they have access credentials for that location on your cluster.
+dataset (with ``datalad get``) if they have access credentials for that particular storage location.
 
 However, you can use configurations to specify how DataLad should commit/manage your data. You might want to commit all
 your files to ``git`` (unless they are large, too numerous, or unless you don't want to make them available to
