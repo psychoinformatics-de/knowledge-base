@@ -16,7 +16,7 @@ is saved.
 Question:
 ---------
 
-When I convert an existing folder to a DataLad dataset, all files are moved to ``./.git/annex/objects/`` and
+On my Mac or Linux machine, when I convert an existing folder to a DataLad dataset, all files are moved to ``./.git/annex/objects/`` and
 the file at the original location becomes a link to the moved content in ``./.git/annex/objects``. Is this
 normal?
 
