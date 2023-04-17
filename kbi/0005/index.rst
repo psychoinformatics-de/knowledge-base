@@ -1,11 +1,10 @@
-.. index::
-   single: datalad drop, subdataset
+.. index:: datalad; drop, subdataset
 
 KBI0005: Drop a subdataset to speed up superdataset operations
-================================================================
+==============================================================
 
 :authors: Laura Waite <laura@waite.eu>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/21
 :keywords: subdataset, datalad drop
 
 In certain situations, superdatasets can contain heavy subdatasets (e.g. with
