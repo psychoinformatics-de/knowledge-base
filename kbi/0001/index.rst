@@ -167,6 +167,20 @@ Like any global Git configuration, it is written to the user's
 configuration file (typically ``$HOME/.gitconfig``), and its current
 value can be shown with ``git config safe.directory``.
 
+Additional comments
+-------------------
+
+The KBI applies also, but not only, to repositories set up in Git
+shared mode (i.e. allowing users belonging to the same group to push
+into the repository). In general, we recommend avoiding this mode for
+repository checkouts, as a push by someone may change the worktree
+content or git-annex branch content without warning. Whenever
+possible, users should create clones only for themselves, e.g. from a
+shared bare repository / `RIA store`_.
+
+.. _RIA store: https://handbook.datalad.org/en/latest/beyond_basics/101-147-riastores.html
+
+
 .. [1]
    Found by ``git log Documentation/config/safe.txt`` in a clone of git
    repository; can be also seen in
