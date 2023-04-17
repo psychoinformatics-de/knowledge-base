@@ -13,8 +13,9 @@ KBI0001: Security considerations for accessing shared datasets on multi-user mac
 Overview
 --------
 
-Some users who want to clone Git repositories (DataLad datasets) from locations on a machine that are owned by other users
-report receiving an error message saying::
+Some users who want to clone Git repositories (DataLad datasets) from
+locations on a machine that are owned by other users report receiving
+an error message containing the following statement::
 
    fatal: unsafe repository ('/path/to/repository' is owned by someone
    else)
@@ -36,8 +37,9 @@ behavior, and guidance on possible solutions.
 
 Git version 2.35.2 introduced checks for the top-level directory
 ownership, and a ``safe.directory`` config option to to bypass these
-checks. Description of the config option can be found in `git config
-docs <https://git-scm.com/docs/git-config>`__ (Ctrl-F
+checks. The changes were also added as patches for minor versions from
+2.30 (2.30.3) onwards. Description of the config option can be found
+in `git config docs <https://git-scm.com/docs/git-config>`__ (Ctrl-F
 ``safe.directory``), and begins as follows:
 
    These config entries specify Git-tracked directories that are
@@ -54,9 +56,9 @@ https://github.blog/2022-04-12-git-security-vulnerability-announced/
 Further background
 ------------------
 
-These are relevant fragments from Git v2.35.2 and v2.30.2 release
-notes (note that changes released in 2.35.2 were also applied to older
-maintenance tracks):
+These are the relevant fragments from Git v2.35.2 and v2.30.3 release
+notes (note that changes released together with 2.35.2 were also
+applied to older maintenance tracks):
 
 ::
 
@@ -68,7 +70,7 @@ maintenance tracks):
    issue CVE-2022-24765; see the release notes for these versions
    for details.
 
-   Git v2.30.2 Release Notes
+   Git v2.30.3 Release Notes
    =========================
 
    This release addresses the security issue CVE-2022-24765.
