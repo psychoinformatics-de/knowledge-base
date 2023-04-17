@@ -1,13 +1,14 @@
 .. index::
-   single: clone; multiple users
+   single: datalad; clone
+   single: config; safe.directory
 .. highlight:: text
 
-KBI0001: Shared (multi-user) Git clones
-=======================================
+KBI0001: Security considerations for accessing shared datasets on multi-user machines
+=====================================================================================
 
 :authors: Michał Szczepanik <m.szczepanik@fz-juelich.de>
 :discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/1
-:keywords: shared, clone, safe.directory
+:keywords: clone, shared, safe.directory
 
 Overview
 --------
@@ -143,8 +144,26 @@ config option to ``*``, implying that all directories are safe.
 Recommendation
 --------------
 
-Taking into consideration the information above, DataLad users should
-use their own judgment in setting the ``safe.directory`` config option.
+There are valid situations for cloning a repository from a directory
+owned by another user on the same machine (e.g. shared space used for
+local dataset distribution, or sharing directly between users). In
+such cases, users of recent Git versions will need to declare the
+directory cloned from as "safe" with ``git config --global --add
+safe.directory ...`` in order to clone it. This is essentially a
+declaration of trust, and when doing so, users should consider the
+implications explained above.
+
+Since ``safe.directory`` is a Git security mechanism, DataLad can not
+set the option automatically, and the decision is left to the user.
+
+For similar reasons, we do not recommend using the ``*`` wildcard
+value to declare all directories as safe, although it remains a
+possibility for users dealing with a very large number of such
+repositories.
+
+Like any global Git configuration, it is written to the user's
+configuration file (typically ``$HOME/.gitconfig``), and its current
+value can be shown with ``git config safe.directory``.
 
 .. [1]
    Found by ``git log Documentation/config/safe.txt`` in a clone of git
