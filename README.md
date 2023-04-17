@@ -1,5 +1,7 @@
 # The PsyInf Knowledge Base
 
+[![Documentation Status](https://readthedocs.org/projects/psyinf-knowledge-base/badge/?version=latest)](https://knowledge-base.psychoinformatics.de/?badge=latest)
+
 The actual knowledge is in the `kbi/` directory. The knowledge base can be
 rendered in HTML format by running `make html` in the root of the repository
 (requires Sphinx).
