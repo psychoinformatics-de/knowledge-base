@@ -24,7 +24,7 @@ infrastructure (``psydata.ovgu.de``), and registered as a `Git-type special remo
 
 This means that the webserver behind ``psydata.ovgu.de`` contains a publicly accessible
 annex repo with all file content.
-When the group moved institutions, the data was migrated to the new institutions
+When the group moved institutions, the data was migrated to the new institution's
 hosting infrastructure.
 The former URL was configured to redirect to this new data source.
 This kept data retrieval functional for a few years.
