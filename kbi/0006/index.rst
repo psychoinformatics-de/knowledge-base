@@ -1,5 +1,6 @@
 .. index::
-   single: <topic>; <subtopic>
+   single: special remote; reconfigure
+   single: git-annex; git special remote
 
 KBI0006: How to fix-up a git-type special remote with a new location
 ====================================================================
