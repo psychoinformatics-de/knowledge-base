@@ -58,7 +58,6 @@ annex repo), and the UUID of the special remote, taken from ``remote.log``:
 Afterwards, a test retrieval of some files with ``datalad get`` confirmed success.
 To propagate the location update to the central dataset on GitHub, the ``annex`` branch
 needs to be pushed there.
-This is generally not possible to pull request.
 A regular ``datalad push --to origin`` should suffice.
 The output should indicate that the annex branch was updated::
 
