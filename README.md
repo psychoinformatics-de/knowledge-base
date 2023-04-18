@@ -1,5 +1,10 @@
 # The PsyInf Knowledge Base
 
+If you are looking for solutions, please visit the knowledge base at
+https://knowledge-base.psychoinformatics.de
+
+If you want to contribute solutions, pelase read on.
+
 The actual knowledge is in the `kbi/` directory. The knowledge base can be
 rendered in HTML format by running `make html` in the root of the repository
 (requires Sphinx).
