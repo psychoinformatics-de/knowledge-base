@@ -35,14 +35,13 @@ placed under management of ``git-annex`` will be moved into ``./.git/annex/objec
 the content will remain in the original path. This symbolic link will be tracked by ``git``.
 
 The separation of version management (done by ``git``) and content management (done by ``git-annex``)) make a DataLad
-dataset very flexibld. You can for example share the dataset (``git`` repository) publicly, while keeping the contents
+dataset very flexible. You can for example share the dataset (``git`` repository) publicly, while keeping the contents
 safe elsewhere. People can then access the dataset (with ``datalad clone``) and download individual files in the
 dataset (with ``datalad get``) if they have access credentials for that particular storage location.
 
 However, you can use configurations to specify how DataLad should commit/manage your data. You might want to commit all
 your files to ``git`` (unless they are large, too numerous, or unless you don't want to make them available to
-everybody who clones the ``git`` repository). You could also let every file be managed by ``git-annex``. Usually only
-large binary files will be managed by ``git-annex`` by default.
+everybody who clones the ``git`` repository). You could also let every file be managed by ``git-annex``.
 
 The DataLad Handbook has very useful information on applying standard or custom configurations to your datasets:
 
