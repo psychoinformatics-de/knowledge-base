@@ -2,6 +2,8 @@
    single: special remote; reconfigure
    single: git-annex; git special remote
 
+.. highlight:: console
+
 KBI0006: How to fix-up a git-type special remote with a new location
 ====================================================================
 
@@ -49,9 +51,7 @@ First, the corresponding Git remote was removed:
 
 Next, it was possible to update the special remote by re-enabling it with updated location information.
 This command required knowledge of the new hosting location (again a publicly accessible
-annex repo), and the UUID of the special remote, taken from ``remote.log``:
-
-.. code-block:: bash
+annex repo), and the UUID of the special remote, taken from ``remote.log``::
 
    $ git annex enableremote 9536f86d-eb34-42ed-8ffc-fafd63a2b87e   location=https://datapub.fz-juelich.de/studyforrest/studyforrest/visualrois/.git
 
