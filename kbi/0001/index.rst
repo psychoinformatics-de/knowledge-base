@@ -1,6 +1,4 @@
-.. index::
-   single: datalad; clone
-   single: config; safe.directory
+.. index:: datalad; clone, git config; safe.directory
 .. highlight:: text
 
 KBI0001: Security considerations for accessing shared datasets on multi-user machines
@@ -35,6 +33,10 @@ suggestion::
 This technical note provides background information about the observed
 behavior, and guidance on possible solutions.
 
+
+Background
+----------
+
 Git version 2.35.2 introduced checks for the top-level directory
 ownership, and a ``safe.directory`` config option to to bypass these
 checks. The changes were also added as patches for minor versions from
@@ -52,9 +54,6 @@ in `git config docs <https://git-scm.com/docs/git-config>`__ (Ctrl-F
 
 Related GitHub blog post:
 https://github.blog/2022-04-12-git-security-vulnerability-announced/
-
-Further background
-------------------
 
 These are the relevant fragments from Git v2.35.2 and v2.30.3 release
 notes (note that changes released together with 2.35.2 were also
@@ -155,7 +154,7 @@ safe.directory ...`` in order to clone it. This is essentially a
 declaration of trust, and when doing so, users should consider the
 implications explained above.
 
-Since ``safe.directory`` is a Git security mechanism, DataLad can not
+Since ``safe.directory`` is a Git security mechanism, DataLad will not
 set the option automatically, and the decision is left to the user.
 
 For similar reasons, we do not recommend using the ``*`` wildcard
