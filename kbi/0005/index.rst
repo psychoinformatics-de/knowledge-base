@@ -12,7 +12,7 @@ many files) that slow down dataset operations.
 
 A common example of this is a BIDS dataset with a nested ``sourcedata``
 subdataset that contains the source DICOM files from the file format conversion
-to NIFTI.
+to NIfTI.
 
 ::
 
