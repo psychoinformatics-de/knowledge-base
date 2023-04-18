@@ -17,7 +17,7 @@ Initially, data was hosted on University of Magdeburg's
 infrastructure (``psydata.ovgu.de``), and registered as a `Git-type special remote`_
 ``mddatasrc``:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ git cat-file -p git-annex:remote.log
    9536f86d-eb34-42ed-8ffc-fafd63a2b87e autoenable=true location=http://psydata.ovgu.de/studyforrest/visualrois/.git name=mddatasrc type=git timestamp=1459405007.225384s
