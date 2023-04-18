@@ -68,3 +68,9 @@ The output should indicate that the annex branch was updated::
 
 To ensure everything worked as intended, the updated dataset was cloned again to
 test if data retrieval succeeded.
+
+
+Alternatives
+------------
+
+In the future, git-annex may provide a dedicate management command for this purpose. See https://git-annex.branchable.com/bugs/Disabling_remote_auto-enabling_not_possible for updates.
