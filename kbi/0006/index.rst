@@ -6,7 +6,7 @@ KBI0006: How to fix-up a git-type special remote with a new location
 ====================================================================
 
 :authors: Adina Wagner <adina.wagner@t-online.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/22
 :keywords: special remote, git-annex, gitannex; enableremote
 
 In many datasets, special remotes ensure that annexed file content can
