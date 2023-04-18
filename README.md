@@ -1,4 +1,6 @@
 [![Documentation Status](https://readthedocs.org/projects/psyinf-knowledge-base/badge/?version=latest&style=for-the-badge)](https://knowledge-base.psychoinformatics.de/?badge=latest)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/psychoinformatics-de/knowledge-base.svg)](http://isitmaintained.com/project/psychoinformatics-de/knowledge-base "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/psychoinformatics-de/knowledge-base.svg)](http://isitmaintained.com/project/psychoinformatics-de/knowledge-base "Percentage of issues still open")
 
 
 # The PsyInf Knowledge Base
