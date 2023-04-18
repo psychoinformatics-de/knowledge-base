@@ -1,6 +1,5 @@
 .. index::
-   single: special remote; reconfigure
-   single: git-annex; git special remote
+   triple: git-annex; special remote; reconfigure
 
 .. highlight:: console
 
