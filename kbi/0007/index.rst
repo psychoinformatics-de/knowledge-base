@@ -5,7 +5,7 @@ KBI0007: Create a DataLad dataset from a published collection of files
 ======================================================================
 
 :authors: Michael Hanke <michael.hanke@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/29
 :keywords: geo, eurostat, ftp, http
 
 Sometimes data exists as (a collection of) individual files that can simply be
@@ -18,7 +18,7 @@ time.
 
 This KBI describes a simple approach how any collection of files that are
 accessible via some URL can be tracked in a DataLad dataset. This approach is
-applicable to a large number of data sources, such as the `Eurostat`_ (the EU's
+applicable to a large number of data sources, such as `Eurostat`_ (the EU's
 portal on statistics and data on Europe) that supports direct file access via
 their `bulk download interface`_.
 
@@ -75,7 +75,7 @@ Next we can use the ``addurls`` command to populate the dataset with the files
 given in the table. The command requires three parameters: 1) the path to the
 CSV table; 2) the name of the table column with the access URL of a file; and
 3) the name of the table column with the associated file name to be used in the
-DataLad dataset.
+DataLad dataset, the latter two enclosed in curly braces (``{}``).
 
 .. code-block:: console
 
