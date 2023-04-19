@@ -1,0 +1,5 @@
+filename,url
+GSE209630_family.soft.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE209nnn/GSE209630/soft/GSE209630_family.soft.gz
+GSE209630_family.xml.tgz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE209nnn/GSE209630/miniml/GSE209630_family.xml.tgz
+GSE209630_series_matrix.txt.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE209nnn/GSE209630/matrix/GSE209630_series_matrix.txt.gz
+GSE209630_RAW.tar,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE209nnn/GSE209630/suppl/GSE209630_RAW.tar
