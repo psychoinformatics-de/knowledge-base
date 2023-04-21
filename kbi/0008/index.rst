@@ -31,7 +31,7 @@ A few words of caution
 Removing the annex
 ------------------
 
-Go to the dataset from which you want to remove the git annex and save the current s
+Go to the dataset from which you want to remove the annex and save the current state:
 
 .. code-block:: console
 
