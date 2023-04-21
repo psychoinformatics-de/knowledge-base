@@ -1,8 +1,8 @@
 .. index::
    single: <annex>; <remove a git annex>
 
-KBI0008 Remove a git annex
-==========================
+KBI0008: Remove a dataset's annex
+=============================
 
 :authors: Christian Mönch <christian.moench@web.de>
 :discussion: https://github.com/datalad-handbook/book/issues/939
