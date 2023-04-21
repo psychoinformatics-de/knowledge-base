@@ -75,7 +75,11 @@ That is it, no more annex files in your local dataset copy. If you want to push 
 Pushing an un-annexed dataset to a sibling
 ------------------------------------------
 
-Before you can push a freshly un-annexed dataset to a sibling that still has an annex, you have to delete the ``git-annex``-branch in the sibling. Afterwards you can push the un-annexed dataset to the sibling. All subsequent clones from the sibling will have no annexed data. The following two commands will delete the ``git-annex``-branch from the sibling and push the un-annexed dataset to the sibling (we assume that the siblings name is ``a_sibling``):
+If your dataset has sibling datasets that were created and pushed to before running ``git annex uninit``, these siblings will still have an annex.
+If you were to ``datalad push`` to or ``datalad update`` from these siblings, it would re-instate the git-annex branch in your dataset.
+While this would not annex the previously annexed files again, it could cause future files to get annexed.
+To prevent this, you have to delete the ``git-annex``-branch in the sibling before pushing or pulling updates.
+Afterwards you can push the un-initialized dataset to the sibling. All subsequent clones from the sibling will have no annexed data. The following two commands will delete the ``git-annex``-branch from the sibling and push the un-initialized dataset to the sibling (we assume that the siblings name is ``a_sibling``):
 
 .. code-block:: console
 
