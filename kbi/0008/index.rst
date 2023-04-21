@@ -39,7 +39,29 @@ Go to the dataset from which you want to remove the annex and save the current s
     > datalad save
 
 
-Now it is time to remove the annex. The command ``git annex uninit`` will perform this task. But it will leave the now un-annexed files as "untracked" in the dataset. If you want to keep their content, you **have** to make sure to add them to ``git`` before doing anything else. This can be done with a single ``git add .``-command in the root of the dataset, if your dataset is clean, i.e. does not contain other untracked files, that should not become part of the dataset content (if your dataset is not clean, you can add all files that want to keep individually with the command ``git add <file-name>``). Afterwards you should execute a ``datalad save``. So the next commands are:
+Now it is time to remove the annex. The command ``git annex uninit`` (`uninit documentation <https://git-annex.branchable.com/git-annex-uninit/>`_) will perform this task. 
+But it will leave the now un-annexed files as "untracked" in the dataset::
+
+.. code-block:: console
+
+    > git annex uninit
+    unannex <your-file(s)> ok
+    (recording state in git...)
+    Deleted branch git-annex (was <SHA>).
+    > git status
+    Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+            deleted:    <your-file>
+
+     Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+            <your-file>
+
+
+If you want to keep their content, you **have** to make sure to add them to ``git`` before doing anything else. 
+This can be done with a single ``git add .`` command in the root of the dataset if your dataset does not contain aditional untracked files that should not become part of the dataset content (if your dataset is not clean, you can add all files that you want to keep individually with the command ``git add <file-name>``). 
+Afterwards you should execute a ``datalad save``. 
+So the full sequence of commands are:
 
 .. code-block:: console
 
