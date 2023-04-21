@@ -48,7 +48,7 @@ Fetch all annexed data. Data that is not locally present when you remove the ann
 
 
 Now it is time to remove the annex. The command ``git annex uninit`` (`uninit documentation <https://git-annex.branchable.com/git-annex-uninit/>`_) will perform this task. 
-But it will leave the now un-annexed files as "untracked" in the dataset::
+But it will leave the now un-annexed files as "untracked" in the dataset:
 
 .. code-block:: console
 
