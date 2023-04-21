@@ -10,3 +10,11 @@ the topic :ref:`index <genindex>`, or by browsing the list below.
    :caption: Knowledge Base Items
 
    kbi/*/index
+
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :caption: Index overview
+
+   genindex
