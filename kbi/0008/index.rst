@@ -28,8 +28,8 @@ A few words of caution
 2. If you remove the annex, your files will be untracked in your dataset directory. That means, they are not versioned at this moment. If you don't follow the instructions in this knowledge base item precisely you might lose those files. Please be careful when you remove the annex! Work on a copy, or make sure that you have a sibling that contains your data. We do not want you to lose data.
 
 
-Removing a git annex
---------------------
+Removing the annex
+------------------
 
 Go to the dataset from which you want to remove the git annex and save the current s
 
