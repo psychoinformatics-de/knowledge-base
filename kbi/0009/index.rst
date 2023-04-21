@@ -1,5 +1,5 @@
 .. index::
-   single: <topic>; <subtopic>
+   single: clone; copy
 
 .. highlight:: console
 
