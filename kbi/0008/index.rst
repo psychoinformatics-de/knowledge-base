@@ -2,7 +2,7 @@
    single: <annex>; <remove a git annex>
 
 KBI0008: Remove a dataset's annex
-=============================
+=================================
 
 :authors: Christian Mönch <christian.moench@web.de>
 :discussion: https://github.com/datalad-handbook/book/issues/939
@@ -40,7 +40,7 @@ Go to the dataset from which you want to remove the annex and save the current s
 
 
 Now it is time to remove the annex. The command ``git annex uninit`` (`uninit documentation <https://git-annex.branchable.com/git-annex-uninit/>`_) will perform this task. 
-But it will leave the now un-annexed files as "untracked" in the dataset::
+But it will leave the now un-annexed files as "untracked" in the dataset:
 
 .. code-block:: console
 
@@ -50,12 +50,12 @@ But it will leave the now un-annexed files as "untracked" in the dataset::
     Deleted branch git-annex (was <SHA>).
     > git status
     Changes to be committed:
-        (use "git restore --staged <file>..." to unstage)
-            deleted:    <your-file>
+    (use "git restore --staged <file>..." to unstage)
+    deleted:    <your-file>
 
-     Untracked files:
+    Untracked files:
         (use "git add <file>..." to include in what will be committed)
-            <your-file>
+           <your-file>
 
 
 If you want to keep their content, you **have** to make sure to add them to ``git`` before doing anything else. 
