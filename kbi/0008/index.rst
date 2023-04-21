@@ -1,5 +1,5 @@
 .. index::
-   single: <annex>; <remove a git annex>
+   triple: git-annex; uninit; remove dataset annex
 
 KBI0008: Remove a dataset's annex
 =================================
