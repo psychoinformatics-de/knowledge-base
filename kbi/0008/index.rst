@@ -11,6 +11,8 @@ KBI0008: Remove a dataset's annex
 This knowledge base item describes how to remove the annex from a DataLad
 dataset and propagate that change to siblings
 
+DataLad version used: this knowledge base item was created based on DataLad version 0.18.3
+
 
 The scenario
 ------------
@@ -31,16 +33,22 @@ A few words of caution
 Removing the annex
 ------------------
 
-Go to the dataset from which you want to remove the annex and save the current state:
+Go to the dataset from which you want to remove the annex and save the current state. Fetch all annexed data
 
 .. code-block:: console
 
     > cd my_dataset
     > datalad save
 
+Fetch all annexed data. Data that is not locally present when you remove the annex will not be locally present after removal of the annex.
+
+.. code-block:: console
+
+   > datalad get .
+
 
 Now it is time to remove the annex. The command ``git annex uninit`` (`uninit documentation <https://git-annex.branchable.com/git-annex-uninit/>`_) will perform this task. 
-But it will leave the now un-annexed files as "untracked" in the dataset:
+But it will leave the now un-annexed files as "untracked" in the dataset::
 
 .. code-block:: console
 
@@ -50,12 +58,12 @@ But it will leave the now un-annexed files as "untracked" in the dataset:
     Deleted branch git-annex (was <SHA>).
     > git status
     Changes to be committed:
-    (use "git restore --staged <file>..." to unstage)
-    deleted:    <your-file>
+        (use "git restore --staged <file>..." to unstage)
+            deleted:    <your-file>
 
-    Untracked files:
+     Untracked files:
         (use "git add <file>..." to include in what will be committed)
-           <your-file>
+            <your-file>
 
 
 If you want to keep their content, you **have** to make sure to add them to ``git`` before doing anything else. 
@@ -88,4 +96,10 @@ Afterwards you can push the un-initialized dataset to the sibling. All subsequen
 
 
 That is it. Your sibling will have no more annex either.
+
+
+A final warning
+---------------
+
+Do not remove the annex of a dataset that is shared with other users. Those users might not be able to ``datalad get`` data, and push- and update-operations might behave very unexpectedly and lead to data loss.
 
