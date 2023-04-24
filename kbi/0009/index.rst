@@ -12,11 +12,10 @@ KBI0009: How to re-ingest file content in a dataset clone
 :software-versions: datalad_0.18.3, git-annex_10.20221003
 
 
-Typically, data transfer for data in DataLad datasets works best when
-relying on the transport mechanisms DataLad and its underlying tools
-provide:
-To obtain a copy of the data in a dataset in location A in a different
-location B, one can clone the dataset from A to B and retrieve its contents.
+Typically, transfer of data in DataLad datasets works best when
+relying on the transport mechanisms provided by DataLad:
+To obtain a copy of files from a dataset at location A to a different
+location B, one would clone the dataset from A to B and retrieve its contents.
 
 This KBI, though, outlines a rather unusual different method:
 Given that the dataset in A contains lots of data, and given that a complete
