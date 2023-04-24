@@ -30,7 +30,7 @@ Go to the dataset from which you want to remove the annex and save the current s
     > cd my_dataset
     > datalad save
 
-Fetch all annexed data. Data that is not locally present when you remove the annex will not be locally present after removal of the annex.
+Fetch all annexed data. File contents that are not locally present when the annex is removed can no longer be retrieved via ``datalad get``.
 
 .. code-block:: console
 
