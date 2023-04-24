@@ -56,7 +56,7 @@ version of every branch::
 
 When cloning this adjusted-mode checkout onto a Linux system, DataLad is not able
 to establish a proper clone.
-The clone will look like a dataset in adjust-mode, but it is not.
+The clone will look like a dataset in adjust-mode, although it is not.
 Putting the clone into adjusted-mode via `git-annex adjust --unlock` also does
 not yield a working dataset.
 To make things work, we simply remove the adjustment by checking out the regular
