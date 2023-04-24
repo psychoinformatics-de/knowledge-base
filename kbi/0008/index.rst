@@ -11,8 +11,6 @@ KBI0008: Remove a dataset's annex
 This knowledge base item describes how to remove the annex from a DataLad
 dataset and propagate that change to siblings
 
-DataLad version used: this knowledge base item was created based on DataLad version 0.18.3
-
 
 A few words of caution
 ......................
