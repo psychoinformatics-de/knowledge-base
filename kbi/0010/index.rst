@@ -60,8 +60,8 @@ to establish a proper clone.
 The clone will look like a dataset in adjust-mode, although it is not.
 Putting the clone into adjusted-mode via `git-annex adjust --unlock` also does
 not yield a working dataset.
-To make things work, we simply remove the adjustment by checking out the regular
-branch (usually, it would be called ``master`` or ``main``) and killing the
+To make things work, we must remove the adjustment by checking out the regular
+branch (usually, it would be called ``master`` or ``main``) and removing the
 adjusted one::
 
     $  git -C /tmp/onlinux checkout master
