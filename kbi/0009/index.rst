@@ -18,7 +18,7 @@ To obtain a copy of files from a dataset at location A to a different
 location B, one would clone the dataset from A to B and retrieve its contents.
 
 This KBI, though, outlines a rather unusual different method:
-Given that the dataset in A contains lots of data, and given that a complete
+If a dataset at location A contains lots of data, and given that a complete
 **copy of the data already exists outside of a DataLad dataset in location B**,
 a plain clone from the dataset in A to B can be used to re-ingest the data.
 The result is identical to having cloned and retrieved data, but without
