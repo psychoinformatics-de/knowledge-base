@@ -15,7 +15,7 @@ dataset and propagate that change to siblings
 A few words of caution
 ......................
 
-1. You should not remove the annex if you have large files, i.e. 1GB or larger, in your dataset. ``git`` is not intended for large files, which is the reason for the creation of ``git annex`` in the first place.
+1. You should not remove an annex of a dataset, if you have large files (>100MB), or many files (>several MB) that are cumulatively large. ``git`` is not intended for large files, which is the reason for the creation of ``git annex`` in the first place.
 
 2. Once you removed an annex, previously annexed files will then be untracked in the dataset's directory. That means, they are no longer versioned at that moment. If you do not follow these instructions precisely **you might lose the files' content**. It is safer to work on a dataset copy, or make sure that another dataset sibling still contains all files' content.
 
