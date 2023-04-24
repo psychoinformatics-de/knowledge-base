@@ -9,7 +9,7 @@ KBI0009: How to re-ingest file content in a dataset clone
 :authors: Adina Wagner <adina.wagner@t-online.de>
 :discussion: <link>
 :keywords: file content; copy; re-ingest file content
-:version: datalad 0.18.3, git annex 10.20221003
+:software-versions: datalad_0.18.3, git-annex_10.20221003
 
 
 Typically, data transfer for data in DataLad datasets works best when
