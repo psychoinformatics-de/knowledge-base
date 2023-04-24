@@ -14,14 +14,6 @@ dataset and propagate that change to siblings
 DataLad version used: this knowledge base item was created based on DataLad version 0.18.3
 
 
-The scenario
-------------
-
-You have a DataLad dataset that has annexed files and you decide that you
-don't want to use git-annex anymore in this dataset. This change should
-also be propagated to all siblings of the dataset.
-
-
 A few words of caution
 ......................
 
