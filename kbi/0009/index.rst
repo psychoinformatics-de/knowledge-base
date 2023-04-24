@@ -7,7 +7,7 @@ KBI0009: How to re-ingest file content in a dataset clone
 =========================================================
 
 :authors: Adina Wagner <adina.wagner@t-online.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/37
 :keywords: file content; copy; re-ingest file content
 :software-versions: datalad_0.18.3, git-annex_10.20221003
 
