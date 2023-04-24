@@ -7,7 +7,7 @@ KBI0010: Cloning a dataset that exists in the form of an adjusted mode checkout
 ===============================================================================
 
 :authors: Adina Wagner <adina.wagner@t-online.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/38
 :keywords: adjusted mode, clone, cross-platform, Windows
 :software-versions: datalad_0.18.3, git-annex_10.20221003
 
