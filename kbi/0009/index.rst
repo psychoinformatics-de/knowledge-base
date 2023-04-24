@@ -28,7 +28,7 @@ duplicating the data transfer and instead using the pre-existing copy of the dat
 Example workflow
 ----------------
 
-Lets set up a toy example dataset at location A::
+Let's set up a toy example dataset at location A::
 
     # on one system
     $ datalad create location-A
