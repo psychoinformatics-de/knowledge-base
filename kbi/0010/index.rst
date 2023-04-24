@@ -52,7 +52,7 @@ instead of symlinks, and that the dataset has an "adjusted/<branch>(unlocked)"
 version of every branch::
 
     $ ls -l /media/mih/Samsung_T5/tmp/onwindows
-    .rwxr-xr-x 10M mih mih 14 Apr 11:19  big.dat
+    .rwxr-xr-x 10M mih mih 14 Apr 11:19 big.dat
 
 When cloning this adjusted-mode checkout onto a Linux system, DataLad is not able
 to establish a proper clone.
