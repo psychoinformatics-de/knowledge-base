@@ -77,7 +77,8 @@ So the full sequence of commands are:
     > git add .
     > datalad save
 
-That is it, no more annex files in your local dataset copy. If you want to push this dataset to siblings, read on.
+That is it, no more annexed files in your local dataset copy.
+If you want to push this dataset to siblings, read on.
 
 
 Pushing an un-annexed dataset to a sibling
