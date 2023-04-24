@@ -34,7 +34,7 @@ Let's set up a toy example dataset at location A::
     $ datalad create location-A
     create(ok): /tmp/location-A (dataset)
 
-Let's put some files inside. In this toy example its only a single small file,
+Let's put some files inside. In this toy example it is only a single small file,
 but the principles behind this demonstration hold independent of number or size
 of files::
 
