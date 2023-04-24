@@ -23,7 +23,7 @@ A few words of caution
 Removing the annex
 ------------------
 
-Go to the dataset from which you want to remove the annex and save the current state. Fetch all annexed data
+Go to the dataset from which you want to remove the annex and save the current state.
 
 .. code-block:: console
 
