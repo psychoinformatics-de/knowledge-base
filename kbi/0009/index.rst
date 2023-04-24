@@ -89,10 +89,6 @@ is expected/tracked, no new commit will be created::
     $ git log -1 --pretty=oneline | cat
     ba083bf39f87bc97c60d70b1ff0c69e41cbf28a2 [DATALAD RUNCMD] dd if=/dev/urandom bs=1M count=10 of=/ho...
 
-If the commit Shasum differs from the previously seen Shasum now, though, the
-data that has been ingested isn't identical to the data originally tracked, for
+If the commit SHA differs from the previously seen SHA now, though, the
+data that has been ingested is not identical to the data originally tracked, for
 example due to accidental corruption.
-
-
-
-
