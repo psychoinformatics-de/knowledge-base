@@ -9,6 +9,7 @@ KBI0010: Cloning a dataset that exists in the form of an adjusted mode checkout
 :authors: Adina Wagner <adina.wagner@t-online.de>
 :discussion: <link>
 :keywords: adjusted mode, clone, cross-platform, Windows
+:software-versions: datalad_0.18.3, git-annex_10.20221003
 
 Due to major difference between filesystems that git-annex regards a "crippled"
 (such as those commonly found on `Windows machines`_ or smartphones) and common
