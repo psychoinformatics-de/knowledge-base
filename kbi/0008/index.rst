@@ -19,7 +19,7 @@ A few words of caution
 
 1. You should not remove the annex if you have large files, i.e. 1GB or larger, in your dataset. ``git`` is not intended for large files, which is the reason for the creation of ``git annex`` in the first place.
 
-2. If you remove the annex, your files will be untracked in your dataset directory. That means, they are not versioned at this moment. If you don't follow the instructions in this knowledge base item precisely you might lose those files. Please be careful when you remove the annex! Work on a copy, or make sure that you have a sibling that contains your data. We do not want you to lose data.
+2. Once you removed an annex, previously annexed files will then be untracked in the dataset's directory. That means, they are no longer versioned at that moment. If you do not follow these instructions precisely **you might lose the files' content**. It is safer to work on a dataset copy, or make sure that another dataset sibling still contains all files' content.
 
 
 Removing the annex
