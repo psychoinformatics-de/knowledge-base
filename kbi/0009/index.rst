@@ -66,7 +66,7 @@ changes::
    $ git log -1 --pretty=oneline | cat
    ba083bf39f87bc97c60d70b1ff0c69e41cbf28a2 [DATALAD RUNCMD] dd if=/dev/urandom bs=1M count=10 of=/ho...
 
-We can now copy or move over the files from a pre-existing copy on location-B into the worktree of the dataset::
+We can now copy or move over the files from a pre-existing copy into the worktree of the dataset::
 
    $ cp --remove-destination /place/with/copy /tmp/location-B
 
