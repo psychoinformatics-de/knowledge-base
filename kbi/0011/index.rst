@@ -229,3 +229,8 @@ Finally, the list of extensions (available in the currently used installation):
       - module: datalad_next
       - version: 1.0.0b2
    (...)
+
+Datalad Handbook has a nice and more general section on inspecting
+errors and reading the diagnostic output: `How to get help`_.
+
+.. _how to get help: https://handbook.datalad.org/en/latest/basics/101-135-help.html
