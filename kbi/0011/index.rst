@@ -1,11 +1,12 @@
 .. index::
-   single: <topic>; <subtopic>
+   single: installation; datalad
+   single: installation; extensions
 
 KBI0011: Debugging installation issues related to multiple Python versions
 ==========================================================================
 
 :authors: Michał Szczepanik <m.szczepanik@fz-juelich.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/43
 :keywords: python version, package manager, pip, conda, MacOS, linux, Windows
 :software-versions: datalad_0.18.3, python_3.9.2
 
