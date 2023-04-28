@@ -7,7 +7,7 @@ KBI0013: Merge Data Availability Information
 ============================================
 
 :authors: Laura Waite <laura@waite.eu>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/45
 :keywords: git-annex-filter-branch, availability info
 :software-versions: datalad_0.18.3, git-annex_10.20230126
 
