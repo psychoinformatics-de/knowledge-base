@@ -15,7 +15,7 @@ Situations can arise when one wishes to split apart an existing large
 dataset into multiple subdatasets. The command `datalad copy-file`_ works very
 well for this when file ability information is URL-based; however, this is not
 always the case. While there is not yet DataLad tooling to do this, there
-is a workflow using ``git-annex-filter-branch`` that can achieve the desired
+is a workflow using `git-annex-filter-branch`_ that can achieve the desired
 outcome.
 
 It is important to note that this approach will not preserve prior history.
@@ -130,3 +130,4 @@ Now follow the same steps for ``file2.txt`` and ``target2``::
     456
 
 .. _datalad copy-file: http://handbook.datalad.org/en/latest/beyond_basics/101-149-copyfile.html
+.. _git-annex-filter-branch: https://git-annex.branchable.com/git-annex-filter-branch/
