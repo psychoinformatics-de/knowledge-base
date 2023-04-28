@@ -99,6 +99,7 @@ the following commands from the root of your dataset:
 
 .. code-block:: console
 
+    > git annex uninit
     > rm -rf .git/annex
     > git branch -D git-annex
 
