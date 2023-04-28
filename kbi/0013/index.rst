@@ -129,4 +129,4 @@ Now follow the same steps for ``file2.txt`` and ``target2``::
     $ cat target2/file2.txt
     456
 
-.. _datalad copy-file: http://docs.datalad.org/en/stable/generated/man/datalad-copy-file.html
+.. _datalad copy-file: http://handbook.datalad.org/en/latest/beyond_basics/101-149-copyfile.html
