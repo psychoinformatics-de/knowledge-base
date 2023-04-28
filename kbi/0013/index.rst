@@ -3,8 +3,8 @@
 
 .. highlight:: console
 
-KBI0013: Merge Data Availability Information
-============================================
+KBI0013: Split a dataset without touching hosted data
+=====================================================
 
 :authors: Laura Waite <laura@waite.eu>
 :discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/45
