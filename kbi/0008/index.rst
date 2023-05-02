@@ -94,14 +94,14 @@ Removing the annex from other clones of the dataset
 Any previously existing clone of the newly un-annexed dataset will still contain annex-related data, even after a
 ``datalad update`` from an un-annexed sibling. As a result some data will be stored twice in the
 dataset, once in the worktree and once in the directory ``.git/annex/objects``. In addition
-the sibling will still contain a branch called ``git-annex``. To remove both of these artefacts, execute
-the following commands from the root of your dataset:
+the sibling will contain additional files in the directory ``.git/annex`` and a branch called ``git-annex``.
+To remove both of these artefacts, execute the following commands from the root of your dataset:
 
 .. code-block:: console
 
     > git annex uninit
-    > rm -rf .git/annex
-    > git branch -D git-annex
+    > rm -rf .git/annex/objects/*
+    > git annex uninit
 
 
 
