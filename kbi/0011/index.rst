@@ -53,8 +53,8 @@ discusses simple and useful debugging steps.
 Examples
 --------
 
-Example 1
-^^^^^^^^^
+Conda competing with Homebrew on MacOS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 On MacOS, DataLad had been installed with homebrew. Conda base
 environment was activated by default. Datalad-Next had been installed
@@ -73,12 +73,12 @@ URL (handling of which should be provided by DataLad-Next):
 In this instance, it turned out that although the conda environment
 was activated (and pip installed both DataLad and DataLad-next into
 that environment), the homebrew-installed DataLad was higher in the
-path. Because the user preferred working with that conda environment,
+``PATH``. Because the user preferred working with that conda environment,
 the problem was resoved by uninstalling homebrew-DataLad and relying
 on conda to provide DataLad and DataLad-Next.
 
-Example 2
-^^^^^^^^^
+Conflicting Python versions on Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Python 3.11 was installed on a Windows machine where PsychoPy had been
 previously used. After installing Python 3.11, DataLad and
@@ -96,7 +96,7 @@ command (provided by DataLad-Next):
 
 Inspecting the diagnostic output revealed that standalone Python 3.6
 installed with PsychoPy in ``C:\Program Files\PsychoPy3`` was higher
-in PATH then Python 3.11 from ``AppData\Local``. Calling ``pip
+in ``PATH`` then Python 3.11 from ``AppData\Local``. Calling ``pip
 install`` installed packages under Python 3.6, causing installation of
 an outdated DataLad version, and a non-functional DataLad-Next. These
 are excerpts from a diagnostic output:
@@ -230,7 +230,7 @@ Finally, the list of extensions (available in the currently used installation):
       - version: 1.0.0b2
    (...)
 
-Datalad Handbook has a nice and more general section on inspecting
+The Datalad Handbook has a nice and more general section on inspecting
 errors and reading the diagnostic output: `How to get help`_.
 
 .. _how to get help: https://handbook.datalad.org/en/latest/basics/101-135-help.html
