@@ -22,8 +22,8 @@ interface (``datalad`` command). DataLad can be installed with
 different methods, including package managers such as ``apt``,
 ``homebrew``, ``conda``, ``pip``, or others, depending on user
 preferences. DataLad extensions are also distributed through different
-channels, but are most commonly installed using ``pip``, the Package
-Installer for Python.
+channels, but are most commonly installed using ``pip``, the package
+installer for Python [#f1]_.
 
 Like with any other command line tool, the actual executable used when
 calling the ``datalad`` command is determined by searching several
@@ -234,3 +234,10 @@ The Datalad Handbook has a nice and more general section on inspecting
 errors and reading the diagnostic output: `How to get help`_.
 
 .. _how to get help: https://handbook.datalad.org/en/latest/basics/101-135-help.html
+
+.. rubric:: Footnotes
+
+.. [#f1] The name pip originated as an `acronym and declaration`_: pip
+         installs packages.
+
+.. _acronym and declaration: https://ianbicking.org/blog/2008/10/pyinstall-is-dead-long-live-pip.html
