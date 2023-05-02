@@ -56,6 +56,8 @@ working clone itself)::
     $ git -C worksrc annex filter-branch --exclude-repo-config-for=here --include-all-key-information --include-all-repo-config file1.txt
     1932768784ce2f6e3be74bd1993d8b4750680db5
 
+The output of this command is the hash of a newly created git commit object that contains the requested information in an exportable form. 
+
 Enrich the ``target1`` dataset (poor-man's implementation of what ``copy-file``
 would do)::
 
@@ -63,7 +65,7 @@ would do)::
     fromkey file1.txt ok
     (recording state in git...)
 
-Fetch the ``git-annex`` export::
+Using the hash from above, the ``git-annex`` export can be fetched and given a branch name:: 
 
     $ git -C target1 fetch ../worksrc 1932768784ce2f6e3be74bd1993d8b4750680db5:copy-file-tmp/git-annex
     remote: Enumerating objects: 6, done.
@@ -74,7 +76,7 @@ Fetch the ``git-annex`` export::
     From ../worksrc
      * [new ref]         1932768784ce2f6e3be74bd1993d8b4750680db5 -> copy-file-tmp/git-annex
 
-Merge in::
+Merge the export into the ``git-annex`` branch using ``git annex merge``
 
     $ git -C target1 annex merge
     merge git-annex (merging copy-file-tmp/git-annex into git-annex...)
