@@ -39,9 +39,12 @@ remote that has encryption enabled:
 
 This happens because the gpg-agent called (by either DataLad or
 git-annex) in a subprocess does not have a connection to the terminal
-from which the ``get`` command was issued. It can be remedied by
-setting the ``GPG_TTY`` environment variable, as explained by ``man
-gpg-agent``:
+from which the ``get`` command was issued, and can not ask the user
+for their GPG key passphrase. The problem does not occur if the
+passphrase had been cached by gpg-agent.
+
+It can be remedied by setting the ``GPG_TTY`` environment variable, as
+explained by ``man gpg-agent``:
 
   You should always add the following lines to your ``.bashrc`` or
   whatever initialization file is used for all shell invocations:
