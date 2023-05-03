@@ -5,7 +5,7 @@ KBI0014: Pushing tags with ``datalad push``
 ===========================================
 
 :authors: Michael Hanke <michael.hanke@gmail.com>, Stephan Heunis <jsheunis@gmail.com>
-:discussion: https://github.com/psychoinformatics-de/knowledge-base/issues/49
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/52
 :keywords: datalad push, tags, git config
 :software-versions: datalad_0.18.3, git_2.39.1
 
@@ -24,7 +24,7 @@ Example
 -------
 
 .. code-block:: console
-   
+
    # set up a demo dataset
    $ datalad create ds
    # demo git remote
