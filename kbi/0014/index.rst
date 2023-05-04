@@ -20,22 +20,45 @@ to the sibling.
 The example code below demonstrates how to configure a dataset's so-called `refspec <https://git-scm.com/book/en/v2/Git-Internals-The-Refspec>`_
 to include tags, and what the result of ``datalad push`` looks like.
 
+.. _datalad push: https://handbook.datalad.org/en/latest/basics/101-141-push.html
+.. _git push: https://git-scm.com/docs/git-push
+.. _git config: https://git-scm.com/docs/git-config
+
 Example
 -------
 
+First create a demo dataset:
+
 .. code-block:: console
 
-   # set up a demo dataset
    $ datalad create ds
-   # demo git remote
+
+Then create a demo remote repository:
+
+.. code-block:: console
+
    $ mkdir remote
    $ git -C remote init --bare
-   # register the remote in the dataset
+
+Now we register the remote in the dataset:
+
+.. code-block:: console
+
    $ datalad siblings -d ds add -s origin --url /tmp/push/remote/
+
+And update the dataset's configuration:
+
+.. code-block:: console
+
    # configure all branches to be pushed by default
    $ git -C ds config --add remote.origin.push 'refs/heads/*'
    # configure all tags to be pushed by default too
    $ git -C ds config --add remote.origin.push 'refs/tags/*'
+
+Finally, we can add a tag to the dataset and test the push operation:
+
+.. code-block:: console
+
    # add a tag to the dataset
    $ git -C ds tag mytag
    # push
@@ -43,7 +66,3 @@ Example
    publish(ok): . (dataset) [refs/heads/git-annex->origin:refs/heads/git-annex [new branch]]
    publish(ok): . (dataset) [refs/heads/master->origin:refs/heads/master [new branch]]
    publish(ok): . (dataset) [refs/tags/mytag->origin:refs/tags/mytag [new tag]]
-
-.. _datalad push: https://handbook.datalad.org/en/latest/basics/101-141-push.html
-.. _git push: https://git-scm.com/docs/git-push
-.. _git config: https://git-scm.com/docs/git-config
