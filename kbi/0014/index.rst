@@ -17,7 +17,7 @@ This implies that if the datalad dataset (i.e. git repository) is configured via
 to include tags in the push operation, the ``datalad push`` command will result in the tags being pushed
 to the sibling.
 
-The example code below demonstrates how to configure a dataset's so-called ``<refspec>``
+The example code below demonstrates how to configure a dataset's so-called `refspec <https://git-scm.com/book/en/v2/Git-Internals-The-Refspec>`_
 to include tags, and what the result of ``datalad push`` looks like.
 
 Example
