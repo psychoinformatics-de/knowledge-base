@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 > The information in this issue will be public. If the support event occurred on a private channel, do not include identifying information without explicit consent!
+> Record origin and apply corresponding via-* issue label, if possible.
 
 Origin: <link|description where/when/how the event took place>
 
