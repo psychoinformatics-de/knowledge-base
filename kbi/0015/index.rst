@@ -46,3 +46,5 @@ dataset to a remote sibling. Under the hood, the ``datalad push`` command uses
 A somewhat more relevant datalad command compared to ``git annex sync`` would be
 `datalad update`_, which is used to fetch and optionally merge updates from a sibling into
 a DataLad dataset.
+
+.. _datalad update: https://docs.datalad.org/en/stable/generated/man/datalad-update.html
