@@ -5,7 +5,7 @@ KBI0015: ``datalad push`` vs ``git annex sync``
 ===============================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/64
 :keywords: datalad push, git annex sync
 :software-versions: datalad_0.18.3, git_2.39.1
 
