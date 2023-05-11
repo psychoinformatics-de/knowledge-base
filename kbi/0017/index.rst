@@ -1,8 +1,8 @@
 .. index::
    single: <topic>; <subtopic>
 
-KBI0017: How to delete commits includling their annexed data
-============================================================
+KBI0017: How to delete commits including their annexed data
+===========================================================
 
 :authors: Christian Mönch <christian.moench@web.de>
 :discussion: <link>
@@ -20,7 +20,8 @@ The initial state and the goal
 There is a datalad dataset with an annex and a number of commits.
 Some of those commits added files to the annex, and some might
 just have added files to git. We assume that the last commit has
-added a number of files to the annex.
+added a number of files to the annex. The dataset has not yet been
+pushed to a sibling.
 
 The goal is to remove the last commit and all annexed files that
 were added when the commit was performed.
