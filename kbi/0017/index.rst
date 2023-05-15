@@ -58,7 +58,7 @@ During the interactive rebase drop commit ``255c4fd``.
 git rebase by choosing another commit as a rebase target.)
 
 Now the links to the annexed content are removed. In order
-to remove the annex content itself, execute the command:
+to remove the annex content itself, execute the command `git annex unused`_:
 
 .. code-block:: bash
 
