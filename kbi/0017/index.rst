@@ -5,7 +5,7 @@ KBI0017: How to delete commits including their annexed data
 ===========================================================
 
 :authors: Christian Mönch <christian.moench@web.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/69
 :keywords: delete commits, delete annexed data
 :software-versions: datalad_0.8.13, git-annex_10.20230407
 
