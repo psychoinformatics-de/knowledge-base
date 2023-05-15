@@ -64,8 +64,8 @@ to remove the annex content itself, execute the command `git annex unused`_:
 
     git annex unused
 
-That will display a number of annexed files that are now
-unused. For example:
+That will display a number of annexed files that are not
+referenced anymore from git. For example:
 
 .. code-block:: bash
 
