@@ -36,7 +36,7 @@ annexed files that were added in the commit, and moved into the
 annex object store have to be removed.
 
 There are a few ways to delete commits from git. We propose to
-use an interactive `git rebase`. Let's assume the git-log looks
+use an interactive `git rebase`_. Let's assume the git-log looks
 like this:
 
 .. code-block:: bash
