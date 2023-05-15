@@ -75,8 +75,7 @@ referenced anymore from git. For example:
         1       MD5E-s9--c31ea01ca12b5558b6503a8143cdb98c.txt
         2       MD5E-s11--1d6f4be608158f767aafd1bab92043a7.txt
 
-The unused files can now be dropped with the command ``git annex
-dropunused``:
+The unused files can now be dropped with the command `git annex dropunused`_:
 
 .. code-block:: bash
 
