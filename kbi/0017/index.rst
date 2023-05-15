@@ -86,7 +86,8 @@ The unused files can now be dropped with the command `git annex dropunused`_:
 Words of warning
 ----------------
 
-Not every presently "unused" key might be from a delete commit. There might be
+Not every presently "unused" key (i.e. unreferenced data file) might be
+from the deleted commit. There might be
 other historical data that is also no longer referenced, but still useful.
 
 BE CAREFUL!
