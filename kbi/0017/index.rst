@@ -82,6 +82,9 @@ The unused files can now be dropped with the command `git annex dropunused`_:
     > git annex dropunused 1
     > git annex dropunused 2
 
+.. _git rebase: https://git-scm.com/docs/git-rebase
+.. _git annex unused: https://git-annex.branchable.com/git-annex-unused/
+.. _git annex dropunused: https://git-annex.branchable.com/git-annex-dropunused/
 
 Words of warning
 ----------------
