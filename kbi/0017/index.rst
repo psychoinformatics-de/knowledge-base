@@ -24,7 +24,9 @@ added a number of files to the annex. The dataset has not yet been
 pushed to a sibling.
 
 The goal is to remove the last commit and all annexed files that
-were added when the commit was performed.
+were added when the commit was performed. (However, the same process
+can be applied for any specific commit, not only the last. See the `note`_
+below.)
 
 
 Principal strategy
@@ -33,11 +35,26 @@ Principal strategy
 To remove a commit and all annexed files, two phases have to be
 executed. First, the commit itself has to be removed. Second, the
 annexed files that were added in the commit, and moved into the
-annex object store have to be removed.
+annex object store, have to be removed.
 
 There are a few ways to delete commits from git. We propose to
-use an interactive `git rebase`_. Let's assume the git-log looks
-like this:
+use an interactive `git rebase`_.
+
+.. _note:
+
+.. note::
+
+    Technically, a ``git reset --hard`` could also be used in this instance
+    to reset the current branch tip to the specific commit before the last.
+    However, let's suppose that the single commit that we wanted to remove
+    was not the last one, and that other commits that we consider useful were
+    added after the to-be-removed commit. We wouldn't want to remove those
+    other commits as well, which is exactly what a ``git reset --hard`` would
+    do if it was applied to the commit preceding the to-be-removed commit.
+    In this case, ``git reset --hard`` provides much more flexibility to pick
+    and drop specific commits, as demonstrated below.
+
+Let's assume the git-log looks like this:
 
 .. code-block:: bash
 
