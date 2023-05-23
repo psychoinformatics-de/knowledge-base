@@ -226,7 +226,7 @@ commits (i.e. not everything that changed inside these files):
 Note: since we know that the commit with the added files is also the last commit (i.e. it
 corresponds to the current ``HEAD``), we can also omit the second commit hash.
 
-Let's write the filenames into into an output file:
+Let's write the filenames into an output file:
 
 .. code-block:: console
 
