@@ -5,7 +5,7 @@ KBI0021: Publishing a DataLad dataset to Zenodo
 ===============================================
 
 :authors: Michał Szczepanik <m.szczepanik@fz-juelich.de>
-:discussion: https://github.com/psychoinformatics-de/knowledge-base/issues/24
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/82
 :keywords: zenodo, special remote
 :software-versions: datalad_0.18.3
 
