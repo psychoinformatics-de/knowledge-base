@@ -187,9 +187,6 @@ local configuration, its lower performance and the risk of altering
 existing remote configuration make this option less preferable than
 the alternatives above.
 
-Sources
--------
-
 .. _ria stores: http://handbook.datalad.org/en/latest/beyond_basics/101-147-riastores.html
 .. _prioritizing subdataset clone locations: https://handbook.datalad.org/en/stable/beyond_basics/101-148-clonepriority.html
 .. _more on DIY configurations: https://handbook.datalad.org/en/stable/basics/101-123-config2.html#datalad-config
