@@ -63,7 +63,7 @@ Let's assume the git-log looks like this:
     2dd6618 [DATALAD] new dataset
 
 To remove the last commit, first execute a rebase onto the
-hash that preceeds the last commit, i.e. ``9bb8847``. To do
+hash that precedes the last commit, i.e. ``9bb8847``. To do
 that execute the command:
 
 .. code-block:: bash
@@ -84,20 +84,57 @@ to remove the annex content itself, execute the command `git annex unused`_:
 That will display a number of annexed files that are not
 referenced anymore from git. For example:
 
-.. code-block:: bash
+.. code-block::
 
     unused . (checking for unused data...) (checking master...)
       Some annexed data is no longer used by any files:
         NUMBER  KEY
         1       MD5E-s9--c31ea01ca12b5558b6503a8143cdb98c.txt
         2       MD5E-s11--1d6f4be608158f767aafd1bab92043a7.txt
+   (To see where this data was previously used, run: git annex whereused --historical --unused
 
-The unused files can now be dropped with the command `git annex dropunused`_:
+The result provides the numbers that can be used to drop the annexed data,
+here `1` and `2`. The result does not tell us much about the data that is
+unused. It is important to note, that not every unused data need to be
+from the deleted commit. There might be other historical data that is also
+no longer referenced, but still useful. Git-annex provides a command to
+examine the unused data more closely: `git annex whereused --historical --unused`:
+
+.. code-block::
+
+    > git annex whereused --historical --unused
+    MD5E-s9--c31ea01ca12b5558b6503a8143cdb98c.txt HEAD@{2}:./file_1.txt
+    MD5E-s11--1d6f4be608158f767aafd1bab92043a7.txt HEAD@{2}:./file_2.txt
+
+The output can be used to determine two things. First, which file name is
+associated with a key. Second, we can find the commits that created the data
+objects, that are now unused. The output `HEAD@{2}` refers to an entry in git's
+reflog. It can be examined with the command `git reflog`:
+
+.. code-block::
+
+    > git reflog
+    0fbb9e2 (HEAD -> master) HEAD@{0}: commit: add more files
+    6e56f3d HEAD@{1}: reset: moving to 6e56f3d2c628476d8af0c2d1d14f3e4b560f017f
+    5a498f9 HEAD@{2}: commit: save files for subject 1 and subject 2
+    ...
+
+The commit message, here: `save files for subject 1 and subject 2` and the
+gitsha of the commit, here: `5a498f9` allow to investigate in more detail
+what data is contained in the data-objects.
+
+Another option to determine whether the data object is still of value is of
+course to examine the data object itself.
+
+Once a file has been identified as really unused, it can be dropped with
+the command `git annex dropunused`_:
 
 .. code-block:: bash
 
     > git annex dropunused 1
     > git annex dropunused 2
+
+
 
 .. _git rebase: https://git-scm.com/docs/git-rebase
 .. _git annex unused: https://git-annex.branchable.com/git-annex-unused/
@@ -106,9 +143,9 @@ The unused files can now be dropped with the command `git annex dropunused`_:
 Words of warning
 ----------------
 
-Not every presently "unused" key (i.e. unreferenced data file) might be
-from the deleted commit. There might be
-other historical data that is also no longer referenced, but still useful.
+Despite the described processes to determine the value of an unused file, there
+is still the risk to delete an "unused" data object, that was actually still of
+value.
 
 BE CAREFUL!
 
