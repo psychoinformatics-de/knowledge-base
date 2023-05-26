@@ -9,7 +9,7 @@ KBI0020: Installing DataLad and dependencies in Google Colab
 :keywords: Google Colab, Conda, installation```
 :software-versions: datalad_0.18.4, git-annex_10.20230330-g98a3ba0ea, conda_23.3.1
 
-Google Colaboratory allows anybody to write and execute arbitrary python code
+Google Colaboratory allows anybody to write and execute arbitrary Python code
 through the browser. It is particularly useful if you don't want to go through
 the process of installing particular software on your local machine or server.
 
