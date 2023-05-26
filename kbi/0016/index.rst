@@ -33,8 +33,9 @@ Content
 - `Using datalad diff in a one-liner`_
 - `Drop limitation`_
 
-*Note: if you are not interested in details and just looking for the quickest and leanest
-way to get the job done, skip over to the section: `Using datalad diff in a one-liner`_*
+.. note::
+   If you are not interested in details and just looking for the quickest and leanest
+   way to get the job done, skip over to the section: `Using datalad diff in a one-liner`_*.
 
 
 .. _Preparation:
