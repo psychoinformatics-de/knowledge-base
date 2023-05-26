@@ -276,15 +276,16 @@ specific commit:
 
 To explain:
 
-- ``-f 42f197501c3293bc1c0c22e36b1618eec706090e -t 73489f56ecd5eb4dee14c957349f09c0d8b1684d``
-  uses ``datalad diff``'s ``--from`` and ``--to`` options to specify the two states that
-  will be compared (here using the commit shasums). Alternatively, symbolic names could
-  also be used, for example ``-f HEAD~1 -t HEAD`` to refer to the last commit.
-- ``-f '{state}:{path}'`` uses DataLad's custom formatting option to format results of
-  the ``datalad diff`` command. It produces output like
+- ``-f '{state}:{path}'`` provides an output format template which will be used to
+  format results of the ``datalad diff`` command. It produces output like
   ``added::/Users/jsheunis/Documents/psyinf/Data/drop-files-test/file2.txt``.
-- ``grep`` and ``cut`` are standard UNIX tools to find lines that start with ``added:``,
-  and to only report on the path that is contained in these lines.
+- ``-f HEAD~1 -t HEAD`` uses ``datalad diff``'s ``--from`` and ``--to`` options
+  to specify the two states that will be compared (here using symbolic names referring
+  to previous and last commit). Full or partial commit shasums can also be used like in
+  previous examples (``-f 42f197501c3293bc1c0c22e36b1618eec706090e -t
+  73489f56ecd5eb4dee14c957349f09c0d8b1684d``)
+- ``grep`` and ``cut`` are standard UNIX tools; here they are used to find lines starting
+  with ``added:``, and to extract only the path that is contained in these lines.
 
 This approach could be extended to also cover files that were modified in a specific
 commit, by merely amending the ``grep`` part of the command to grep ``'^modified:'``.
