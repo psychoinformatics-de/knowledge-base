@@ -6,7 +6,7 @@ KBI0020: Installing DataLad and dependencies in Google Colab
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
 :discussion: <link>
-:keywords: workaround, credentials, interactive authentication prompt, keyring
+:keywords: Google Colab, Conda, installation```
 :software-versions: datalad_0.18.4, git-annex_10.20230330-g98a3ba0ea, conda_23.3.1
 
 Google Colaboratory allows anybody to write and execute arbitrary python code
