@@ -18,10 +18,28 @@ could be that only specific files should be dropped, for example all files that 
 to the dataset by a specific commit, while all other files that are available locally
 should remain untouched.
 
-This Knowledge Base Item outlines two methods for dropping local files that were added in
-a specific commit. These methods differ in the way they identify which files to drop (one
-via ``datalad status`` and one via ``git diff``), but the actual dropping of content is
-handled in the same way.
+This Knowledge Base Item outlines several methods for dropping local files that were added
+in a specific commit. These methods differ in the way they identify which files to drop
+(via ``datalad status``, ``git diff``, or ``datalad diff``), but the actual dropping of
+content is handled by ``datalad drop`` in all cases.
+
+Content
+-------
+
+- `Preparation`_
+- `Using datalad status`_
+- `Using git diff`_
+- `Dropping the files`_
+- `Using datalad diff in a one-liner`_
+- `Drop limitation`_
+
+.. note::
+
+   If you are not interested in details and just looking for the quickest and leanest
+   way to get the job done, skip over to the section: `Using datalad diff in a one-liner`_.
+
+
+.. _Preparation:
 
 Preparation
 -----------
@@ -96,6 +114,8 @@ Lastly, let's create more content in the dataset, this time without saving it (y
    echo "jumps over the lazy dog" > file3.txt
 
 
+.. _Using datalad status:
+
 Using ``datalad status``
 ------------------------
 
@@ -154,6 +174,9 @@ save the dataset and push the files to the remote sibling:
       publish (ok: 2)
 
 .. _datalad status: https://docs.datalad.org/en/stable/generated/man/datalad-status.html
+
+
+.. _Using git diff:
 
 Using ``git diff``
 ------------------
@@ -214,8 +237,8 @@ Let's write the filenames into an output file:
 .. _git diff: https://git-scm.com/docs/git-diff
 
 
-Finally, dropping the files
----------------------------
+Dropping the files
+------------------
 
 Now we can again use some shell tools to streamline the dropping process.
 
@@ -234,6 +257,70 @@ Here we use:
    {"action": "drop", "annexkey": "MD5E-s10--6fe97938d91d6a56a50c14caa5c81e12.txt", "path": "/Users/jsheunis/Documents/psyinf/Data/drop-files-test/file2.txt", "refds": "/Users/jsheunis/Documents/psyinf/Data/drop-files-test", "status": "ok", "type": "file"}
    {"action": "drop", "annexkey": "MD5E-s10--6fe97938d91d6a56a50c14caa5c81e12.txt", "path": "/Users/jsheunis/Documents/psyinf/Data/drop-files-test/file3.txt", "refds": "/Users/jsheunis/Documents/psyinf/Data/drop-files-test", "status": "ok", "type": "file"}
 
-Congrats!
 
-You now know multiple ways to drop local files that were added in a specific commit!
+.. _Using datalad diff in a one-liner:
+
+Using ``datalad diff`` in a one-liner
+-------------------------------------
+
+`datalad diff`_ provides similar information as ``git diff``, although with additonial
+functionality related to (nested) DataLad datasets.
+
+If you enjoy running one-liners and preventing unnecessary write operations to disk,
+this option is for you. Below is a single line of code that uses ``datalad diff``, 
+``datalad drop``, and standard UNIX tools to identify and drop files related to a
+specific commit:
+
+.. code-block:: console
+
+   datalad drop $(datalad -f '{state}:{path}' diff -f HEAD~1 -t HEAD | grep '^added:' | cut -d ':' -f 2-)
+
+To explain:
+
+- ``-f '{state}:{path}'`` provides an output format template which will be used to
+  format results of the ``datalad diff`` command. It produces output like
+  ``added::/Users/jsheunis/Documents/psyinf/Data/drop-files-test/file2.txt``.
+- ``-f HEAD~1 -t HEAD`` uses ``datalad diff``'s ``--from`` and ``--to`` options
+  to specify the two states that will be compared (here using symbolic names referring
+  to previous and last commit). Full or partial commit shasums can also be used like in
+  previous examples (``-f 42f197501c3293bc1c0c22e36b1618eec706090e -t
+  73489f56ecd5eb4dee14c957349f09c0d8b1684d``)
+- ``grep`` and ``cut`` are standard UNIX tools; here they are used to find lines starting
+  with ``added:``, and to extract only the path that is contained in these lines.
+
+This approach could be extended to also cover files that were modified in a specific
+commit, by merely amending the ``grep`` part of the command to grep ``'^modified:'``.
+
+.. _datalad diff: https://docs.datalad.org/en/stable/generated/man/datalad-diff.html
+
+
+Congrats! You now know multiple ways to drop local files that were added in a specific
+commit!
+
+.. _Drop limitation:
+
+Drop limitation
+---------------
+
+All of the above examples use a path-based approach to ``drop`` content, although this
+has a specific limitation if the relevant file path was removed in an earlier commit.
+This means there is no actual file in the worktree, and ``datalad drop <path-to-file>``
+would result in an error. To address this, we can let ``datalad diff`` report annex keys
+instead of paths, and use `git annex drop`_ to drop the content:
+
+.. code-block:: console
+
+   datalad -f '{state}:{key}' diff --annex -f HEAD~1 -t HEAD | grep -v '^clean:' | cut -d ':' -f 2- | git annex drop --batch-keys
+
+To explain:
+
+- ``datalad diff``'s ``--from`` and ``--to`` options are used here to find the files that
+  changed during the last commit (``-f HEAD~1 -t HEAD``).
+- ``-f '{state}:{path}'`` is used in the same way as before
+- ``grep -v '^clean:'`` is used with the invert the matching of lines, i.e. it selects
+  all lines where the state is *not* ``clean``
+- ``cut`` is used in the same way as before
+- ``git annex drop --batch-keys`` tells git-annex to drop files specified by the incoming
+  annex keys
+
+.. _git annex drop: https://git-annex.branchable.com/git-annex-drop/
