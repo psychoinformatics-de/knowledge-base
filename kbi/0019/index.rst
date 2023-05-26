@@ -5,7 +5,7 @@ KBI0019: Workaround to an absent interactive authentication prompt
 ==================================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/79
 :keywords: workaround, credentials, interactive authentication prompt, keyring
 :software-versions: datalad_0.18.3
 
