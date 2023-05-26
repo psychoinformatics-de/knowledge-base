@@ -5,7 +5,7 @@ KBI0020: Installing DataLad and dependencies in Google Colab
 ============================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/80
 :keywords: Google Colab, Conda, installation```
 :software-versions: datalad_0.18.4, git-annex_10.20230330-g98a3ba0ea, conda_23.3.1
 
