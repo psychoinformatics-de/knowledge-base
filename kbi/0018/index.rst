@@ -36,8 +36,8 @@ A subdataset source candidate can be configured in the superdataset::
 The last part of the option name (``000mypreferredRIAstore``) combines
 a three-digit *cost* and an arbitrary name of the candidate. Clone
 candidates will be tried in the order of increasing cost. Note that
-there are some default candidates, including superdataset’s remote URL
-with submodule path appended, and submodule url stored in
+there are some default candidates, including the superdataset’s remote URL
+with submodule path appended, and the submodule url stored in
 ``.gitmodules`` file (cost 500 and 600 respectively). See
 `Prioritizing subdataset clone locations`_ chapter in the DataLad
 Handbook for more information.
