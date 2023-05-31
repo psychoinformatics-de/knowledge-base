@@ -10,7 +10,7 @@ KBI0021: Publishing a DataLad dataset to Zenodo
 :software-versions: datalad_0.18.3
 
 This KBI discusses the currently available methods for publishing a
-dataset to `Zenodo`_.
+DataLad dataset to `Zenodo`_.
 
 .. _zenodo: https://zenodo.org/
 
@@ -38,10 +38,10 @@ Partial solution 2: upload files using an existing special remote implementation
 --------------------------------------------------------------------------------
 
 We are aware of one git-annex special remote implementation for
-Zenodo, `git-annex-remote-zenodo`_. However, it is described as work
+Zenodo, `git-annex-remote-zenodo`_. However, it is described as a work
 in progress, and in our testing it showed limited functionality (with
 a small patch we were able to push files to Zenodo, and retrieve them
-back, but only in one and same dataset -- not in a dataset clone).
+back, but only in one and the same dataset -- not in a dataset clone).
 
 See the discussion in the `DataLad Handbook repository issue #941`_
 for a description of required steps (including changes to code).
