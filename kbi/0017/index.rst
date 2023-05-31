@@ -1,5 +1,5 @@
 .. index::
-   single: <topic>; <subtopic>
+   single: delete; commits & data
 
 KBI0017: How to delete commits including their annexed data
 ===========================================================
