@@ -7,7 +7,7 @@ KBI0023: Keyring configuration
 ==============================
 
 :authors: Michał Szczepanik
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/89
 :keywords: keyring, credentials
 :software-versions: datalad_0.18.3, datalad-next_0.6.3
 
