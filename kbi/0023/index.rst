@@ -18,22 +18,25 @@ general overview of keyring access.
 Problem description and troubleshooting
 ---------------------------------------
 
-The problem manifested itself on any operation which requires
-credential access (e.g. ``datalad siblings enable``). Here we
-replicate it with a call to ``datalad credentials`` command (from
-DataLad-next)::
+DataLad uses the `Keyring`_ Python library to communicate with keyring
+backends available on the given system to store user's credentials.
+
+.. _Keyring: https://keyring.readthedocs.io/
+
+If GNOME Keyring is installed on a system, but a D-Bus session is not
+started after login (the latter is likely to be the case on headless
+systems), Keyring library sees the SecretService keyring as an
+available backend and tries to use it, but fails with an error.
+
+The error would appear for any operation requiring credential access
+(e.g. ``datalad siblings enable``). Here we replicate it with the
+``datalad credentials`` command (from DataLad-next)::
 
   $ datalad --log-level debug credentials
   (...)
   [DEBUG  ] Assigning credentials into 21 providers
   [DEBUG  ] Importing keyring
-  [ERROR  ] Failed to create the collection: Prompt dismissed..
-
-This error is coming from the `Keyring`_ Python library, which is used
-by DataLad to communicate with keyring backends available on the given
-system.
-
-.. _Keyring: https://keyring.readthedocs.io/
+  [ERROR  ] Failed to create the collection: Prompt dismissed.
 
 Keyring information, including the active backends and the location of
 a keyring configuration file, can always be found in the output of
@@ -49,17 +52,12 @@ a keyring configuration file, can always be found in the output of
     - config_file: /home/jdoe/.config/python_keyring/keyringrc.cfg
     - data_root: /home/jdoe/.local/share/python_keyring
 
-If GNOME Keyring is installed on a system, but a D-Bus session is not
-started after login (which is likely to be the case on headless
-systems), Keyring library sees the SecretService keyring as an
-available backend and tries to use it, but fails with an error.
-
 User solution 1: configure preferred keyring
 --------------------------------------------
 
 Users can choose their default keyring backend.
 
-The simplest backend is a plaintext keyring, specified as
+The simplest option is a plaintext keyring, specified as
 ``keyrings.alt.file.PlaintextKeyring``. We will use it in our
 examples. Other keyrings are available, but may require installing
 `third-party packages`_.
