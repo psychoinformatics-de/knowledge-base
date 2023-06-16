@@ -170,22 +170,6 @@ as it is also one of the default source candidates:
         datalad-id = 7dfcc05d-b7ba-4b32-b7b0-9f9bb6edcf9d
         datalad-url = "ria+ssh://example.com/path/to/store#7dfcc05d-b7ba-4b32-b7b0-9f9bb6edcf9d"
 
-Reconfigure
------------
-
-Finally, it is possible to recreate the git remote and special remote
-configuration in a clone by repeating the ``create-sibling-ria``
-command and asking it to reconfigure existing siblings::
-
-   $ datalad create-sibling-ria --existing reconfigure ...
-
-However, like any ``create-sibling-*`` command, ``create-sibling-ria``
-performs configuration on local *and remote* end. In the current
-example, it would connect to the ssh server and attempt re-running
-initialization code. While in many cases it would only end up changing
-local configuration, its lower performance and the risk of altering
-existing remote configuration make this option less preferable than
-the alternatives above.
 
 .. _ria stores: http://handbook.datalad.org/en/latest/beyond_basics/101-147-riastores.html
 .. _prioritizing subdataset clone locations: https://handbook.datalad.org/en/stable/beyond_basics/101-148-clonepriority.html
