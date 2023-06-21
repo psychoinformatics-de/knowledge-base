@@ -13,13 +13,13 @@ KBI0024: Create and update a 7-Zip archive in a RIA store
 When working with `RIA stores`_, it is possible to compress the
 ``annex/objects`` into `7-zip`_ archives. With this approach, the entire
 annex object store can be put into an archive and remain fully accessible while
-minimizing inodes, regardless of file number and size. This is beneficial
+minimizing `inodes`_, regardless of file number and size. This is beneficial
 for compression gains or when operating on HPC-systems with inode limitations.
 
 This document describes how to create a 7-Zip archive for an existing RIA
 store using the script shown below. The script does the following:
 
-1. Remove unnecessary files and directories within the RIA store (e.g. hooks,
+1. Remove non-essential files and directories within the RIA store (e.g. hooks,
    etc). This aspect has nothing to do with creating the archive, but is useful
    for reducing the number of inodes.
 2. Create a 7-Zip archive containing the content in the annex object store.
@@ -261,3 +261,4 @@ Run ``datalad update`` to bring in the updates from the RIA store (i.e. ``file2.
 
 .. _ria stores: http://handbook.datalad.org/en/latest/beyond_basics/101-147-riastores.html
 .. _7-Zip: https://www.7-zip.org/
+.. _inodes: https://en.wikipedia.org/wiki/Inode
