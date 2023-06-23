@@ -9,7 +9,7 @@ KBI0022: Performance of ``mv`` vs ``git mv`` when renaming dataset directories
 :keywords: performance, time, datalad save, mv, git move, rename
 :software-versions: datalad_0.18.4, git-annex_10.20230330-g98a3ba0ea
 
-When renaming a directory that forms part of many files in a large DataLad dataset,
+When renaming a directory that contains many files in DataLad dataset,
 a subsequent ``datalad save`` may take an unexpected amount of time. While performance
 is always relative, it is worth considering the use of ``git mv`` followed by
 ``git commit`` instead of a standard ``mv`` and ``datalad save`` in datasets with large
