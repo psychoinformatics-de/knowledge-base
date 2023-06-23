@@ -5,7 +5,7 @@ KBI0022: Performance of ``mv`` vs ``git mv`` when renaming dataset directories
 ==============================================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/issues/74
 :keywords: performance, time, datalad save, mv, git move, rename
 :software-versions: datalad_0.18.4, git-annex_10.20230330-g98a3ba0ea
 
