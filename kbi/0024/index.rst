@@ -6,7 +6,7 @@ KBI0024: Create and update a 7-Zip archive in a RIA store
 =========================================================
 
 :authors: Laura Waite <laura@waite.eu>, Michael Hanke <michael.hanke@gmail.com>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/issues/47
 :keywords: RIA, archive, 7-Zip, inodes
 :software-versions: datalad_0.18.3
 
