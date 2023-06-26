@@ -22,6 +22,7 @@ trees.
    This also includes comparisons with ``git mv`` and comments on when and when not to
    use either of these methods. Performance, however, is not covered in the handbook
    and is hence presented here.
+   **Important:** The recommendations here solely apply to directories. ``git mv`` operations should `not be performed on subdatasets <https://github.com/datalad/datalad/issues/3464>`_. Instead, stick to a plain ``mv`` followed by a ``datalad save``. 
 
 .. _Miscellaneous file system operations: https://handbook.datalad.org/en/latest/basics/101-136-filesystem.html
 
