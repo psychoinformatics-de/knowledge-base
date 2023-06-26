@@ -2,7 +2,7 @@
    single: datalad save; git mv
 
 KBI0022: Performance of ``mv`` + ``datalad save`` vs ``git mv`` + ``git commit``  when renaming dataset directories 
-==============================================================================
+===================================================================================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
 :discussion: https://github.com/psychoinformatics-de/knowledge-base/issues/74
