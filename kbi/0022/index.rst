@@ -1,7 +1,7 @@
 .. index::
    single: datalad save; git mv
 
-KBI0022: Performance of ``mv`` vs ``git mv`` when renaming dataset directories 
+KBI0022: Performance of ``mv`` + ``datalad save`` vs ``git mv`` + ``git commit``  when renaming dataset directories 
 ==============================================================================
 
 :authors: Stephan Heunis <jsheunis@gmail.com>
@@ -96,8 +96,8 @@ To rename the directory ``toplevel``, we can follow one of two options:
 Summary
 +++++++
 
-As you can see, the pure `mv` option took about 1 second while the `git mv`
-option was about 8 times faster. While this is not substantial on a small scale,
+As you can see, the ``mv`` + ``datalad save`` option took about 1 second while the ``git mv``
++ ``git commit`` option was about 8 times faster. While this is not substantial on a small scale,
 it could be an important consideration when renaming paths in datasets with large
 filetrees. Importantly, this point is purely about performance and does not
 consider other aspects that could influence the decision of which renaming method
