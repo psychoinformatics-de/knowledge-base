@@ -10,7 +10,7 @@ KBI0025:  Saving changes in datasets owned by other users
 :software-versions: datalad_0.19.0, git_2.39.2
 
 It is generally recommended to not share one and the same dataset or Git
-repository when collaborating with others.
+repository (i.e., the same directory on the file system) when collaborating with others.
 In the typical workflow for collaboration, each user has their own clone of the
 respective dataset instead.
 One of several reasons why sharing the same dataset is not ideal is that
