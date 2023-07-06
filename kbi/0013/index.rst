@@ -76,7 +76,7 @@ Using the hash from above, the ``git-annex`` export can be fetched and given a b
     From ../worksrc
      * [new ref]         1932768784ce2f6e3be74bd1993d8b4750680db5 -> copy-file-tmp/git-annex
 
-Merge the export into the ``git-annex`` branch using ``git annex merge``
+Merge the export into the ``git-annex`` branch using ``git annex merge``::
 
     $ git -C target1 annex merge
     merge git-annex (merging copy-file-tmp/git-annex into git-annex...)
