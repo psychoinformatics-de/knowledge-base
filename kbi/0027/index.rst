@@ -11,7 +11,7 @@ KBI0027: "Transfer already in progress, or unable to take transfer lock"
 
 When retrieving or uploading data, users can in rare cases see a failure together with the message ``Transfer already in progress, or unable to take transfer lock``.
 This message originates in lock files git-annex uses to keep several transfer processes from interfering with each other.
-Usually, it should suffice to wait a bit until the process that help the lock open is finished and released the lock automatically.
+Usually, it should suffice to wait a bit until the process that holds the lock open exits and releases the lock automatically.
 But in some cases, e.g. when CTRL-C'ing a process unluckily or on Windows, the lock file can get stale, and the error message remains regardless of how long one waits.
 
 When this happens, do the following:
