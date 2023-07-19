@@ -1,6 +1,8 @@
 .. index::
    single: datalad; addurls
 
+.. _kbi0007:
+
 KBI0007: Create a DataLad dataset from a published collection of files
 ======================================================================
 

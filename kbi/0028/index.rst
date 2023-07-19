@@ -17,9 +17,9 @@ folder share URLs with optional password protection. These can be use
 to share data with managed permissions (password or named user), where
 DataLad access is optional.
 
-This document extends KBI0007 in two areas: it introduces the uncurl
-special remote for URL rewriting and credentials access, and focuses
-on Nextcloud-specific URL patterns.
+This document extends :ref:`KBI0007` in two areas: it introduces the
+uncurl special remote for URL rewriting and credentials access, and
+focuses on Nextcloud-specific URL patterns.
 
 This document deals specifically with files that were deposited in
 Nextcloud without using DataLad. For publishing DataLad datasets to
