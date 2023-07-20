@@ -25,9 +25,10 @@ Nextcloud without using DataLad. For publishing DataLad datasets to
 Nextcloud, see the documentation of DataLad-next's
 `create-sibling-webdav`_ command instead.
 
-This document extends :ref:`KBI0007` in two areas: it introduces the
-`uncurl`_ special remote for transforming URLs and using credentials,
-and focuses on Nextcloud-specific URL patterns.
+This document extends the ``addurls``-based approach described in
+:ref:`KBI0007` in two areas: it introduces the `uncurl`_ special
+remote for transforming URLs and using credentials, and focuses on
+Nextcloud-specific URL patterns.
 
 .. _nextcloud: https://nextcloud.com/
 .. _sciebo: https://hochschulcloud.nrw/
@@ -49,7 +50,7 @@ created by appending ``/download?path=<path>&files=<name>`` (where
 ``path`` is a relative path to a directory, and ``name`` is the file
 name). However, if the sharing link is password protected, such URL
 would not work, as it would redirect to a login page (html document)
-and not to file content.
+and not to the file content.
 
 In a general case (share links with or without password, as well as
 sharing with named users), `Nextcloud's webdav access`_ can be
@@ -140,12 +141,14 @@ This would produce the following csv file:
    ...
 	      
 Creating the dataset
--------------
+--------------------
 
-In a DataLad dataset, the process of accessing files that were added via download URLs is handled by a `git-annex special remote`_. The uncurl remote,
-available in the `DataLad-next`_ extension, provides both the ability to
-reconfigure URLs and access to DataLad-next's credential workflow. It
-can be initialized as follows (optionally with ``autoenable=true``) inside a newly created and empty DataLad dataset:
+In a DataLad dataset, the process of accessing files that were added
+via download URLs is handled by a `git-annex special remote`_. The
+uncurl remote, available in the `DataLad-next`_ extension, provides
+both the ability to reconfigure URLs and the access to DataLad-next's
+credential workflow. It can be initialized as follows (optionally with
+``autoenable=true``) inside a DataLad dataset that has been created:
 
 .. _git-annex special remote: https://git-annex.branchable.com/special_remotes/
 .. _DataLad-next: https://github.com/datalad/datalad-next
@@ -177,7 +180,11 @@ Transforming URLs
 -----------------
 
 Assuming the same user moves the folder in their Nextcloud account to
-``some/other/place/``, access to the files in the same DataLad dataset can be retained by setting the URL template of the uncurl remote. The URL template has access to the same identifiers isolated previously with the match expression, and in the case of of this example can use these defined parts with only ``dirpath`` having to change:
+``some/other/place/``, access to the files in the same DataLad dataset
+can be retained by setting the URL template of the uncurl remote. The
+URL template has access to the same identifiers isolated previously
+with the match expression, and in the case of this example can use
+these defined parts with only ``dirpath`` having to change:
 
 .. code-block:: none
 
@@ -198,7 +205,7 @@ Credential caveats
 
 Regardless of whether the files are accessed via the
 ``remote.php/dav/files/USERNAME/`` or ``public.php/webdav`` path, the
-authentication realm for the given nextcloud instance is the
+authentication realm for the given Nextcloud instance is the
 same. This means users who already have DataLad credentials saved for
 the given realm would see their requests for password-protected
 links refused. As long as ``get`` does not support explicit
