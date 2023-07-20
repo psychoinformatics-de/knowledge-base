@@ -5,7 +5,7 @@ KBI0026: Passing configurations
 ===============================
 
 :authors: Adina Wagner <adina.wagner@t-online.de>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/98
 :keywords: configurations, shared repository clone
 :software-versions: datalad_0.19.1, datalad-next_1.0.0b3, git_2.39.2
 
