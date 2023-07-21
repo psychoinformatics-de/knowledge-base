@@ -172,7 +172,7 @@ Finally, files are added to the dataset with ``datalad addurls`` using the previ
 
 .. code-block:: none
 
-   datalad addurls listing.txt https://example.com/nextcloud{href} {name}
+   datalad addurls listing.csv https://example.com/nextcloud{href} {name}
 
 .. _regex101: https://regex101.com
 
