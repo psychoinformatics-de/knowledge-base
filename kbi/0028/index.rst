@@ -159,10 +159,12 @@ credential workflow. It can be initialized as follows (optionally with
 
 With a known URL pattern (see above), a match expression for the uncurl special remote can be defined upfront. Defining a match expression allows us to isolate identifiers (such as ``dirpath``, ``filepath``, etc) in the URL pattern, which becomes particularly useful when URLs need to be transformed in future.
 
-The regular expression below is relatively generic,
-with only the ``dirpath`` being specific to the given example. Websites
-like `regex101`_ can be helpful in building and understanding the
-expression:
+The regular expression below is relatively generic, with only the
+``dirpath`` being given explicitly, and specific to the given
+example. Note that if ``dirpath`` included spaces, they would have to
+be `url-encoded`_; otherwise, the uncurl remote would split the
+expression into two. Websites like `regex101`_ can be helpful in
+building and understanding the expression:
 
 .. code-block:: none
 
@@ -175,6 +177,7 @@ Finally, files are added to the dataset with ``datalad addurls`` using the previ
    datalad addurls listing.csv https://example.com/nextcloud{href} {name}
 
 .. _regex101: https://regex101.com
+.. _url-encoded: https://www.w3schools.com/tags/ref_urlencode.asp
 
 Transforming URLs
 -----------------
