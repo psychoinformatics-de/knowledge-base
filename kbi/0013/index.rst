@@ -131,7 +131,7 @@ Now follow the same steps for ``file2.txt`` and ``target2``::
     $ cat target2/file2.txt
     456
 
-A [datalad/shrinky](https://github.com/datalad/shrinky) provides a reusable
+A `datalad/shrinky <https://github.com/datalad/shrinky>`_ provides a reusable
 helper to create "derived (OpenNeuro BIDS) datasets" which demonstrates a
 similar workflow - just give ``bin/shrinky`` an openneuro dataset id and list
 of paths to be copied to derived dataset.
