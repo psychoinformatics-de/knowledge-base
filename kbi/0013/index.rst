@@ -131,5 +131,10 @@ Now follow the same steps for ``file2.txt`` and ``target2``::
     $ cat target2/file2.txt
     456
 
+A `datalad/shrinky <https://github.com/datalad/shrinky>`_ provides a reusable
+helper to create "derived (OpenNeuro BIDS) datasets" which demonstrates a
+similar workflow - just give ``bin/shrinky`` an openneuro dataset id and list
+of paths to be copied to derived dataset.
+
 .. _datalad copy-file: http://handbook.datalad.org/en/latest/beyond_basics/101-149-copyfile.html
 .. _git-annex-filter-branch: https://git-annex.branchable.com/git-annex-filter-branch/
