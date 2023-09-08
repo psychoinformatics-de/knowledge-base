@@ -6,7 +6,7 @@ KBI0029: Create an empty RIA store
 ==================================
 
 :authors: Laura Waite <laura@waite.eu>
-:discussion: <link>
+:discussion: https://github.com/psychoinformatics-de/knowledge-base/pull/110
 :keywords: RIA store
 :software-versions: datalad_0.19.3
 
