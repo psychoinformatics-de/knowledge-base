@@ -29,7 +29,7 @@ with open("listing.csv", "wt") as urlfile:
         # fileinfo is a dict, with file names as keys,
         # and dicts with actual file info as values;
         # we need path ({"name": "..."})
-        # and URL compnent ({"href": "remote.php/dav/..."})
+        # and URL component ({"href": "remote.php/dav/..."})
         for f in fileinfo.values():
             name = f["name"]
             href = f["href"]
