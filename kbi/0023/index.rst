@@ -48,7 +48,7 @@ a keyring configuration file, can always be found in the output of
   - keyring: 
     - active_backends: 
       - SecretService Keyring
-      - PlaintextKeyring with no encyption v.1.0 at /home/jdoe/.local/share/python_keyring/keyring_pass.cfg
+      - PlaintextKeyring with no encryption v.1.0 at /home/jdoe/.local/share/python_keyring/keyring_pass.cfg
     - config_file: /home/jdoe/.config/python_keyring/keyringrc.cfg
     - data_root: /home/jdoe/.local/share/python_keyring
 

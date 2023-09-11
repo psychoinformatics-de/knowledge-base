@@ -33,7 +33,7 @@ with DataLad's ``create`` command::
 
     $ datalad create <path>
 
-A new state of this dataset is populated to match the lastest state of a Dataverse
+A new state of this dataset is populated to match the latest state of a Dataverse
 dataset using the ``addurls-dataverse.py`` script that is shown below. it must be
 executed with a Python environment that has the aforementioned software dependencies
 installed. The scripts assumes to run in the root directory of the DataLad dataset

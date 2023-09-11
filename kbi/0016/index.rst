@@ -10,7 +10,7 @@ KBI0016: Drop local files added in a specific commit
 :keywords: datalad status, datalad drop, git diff, scripting
 :software-versions: datalad_0.18.3, git_2.39.1, 
 
-In some cases it might be preferrable to drop file content from a DataLad dataset in local
+In some cases it might be preferable to drop file content from a DataLad dataset in local
 storage after having pushed this content to a sibling of the dataset. This is particularly
 useful in order to free up local storage space: since the data is now pushed safely to
 remote storage, we don't have to store it locally anymore. However, a likely requirement
@@ -133,7 +133,7 @@ show the state of the two files that were added last:
 
 The drawback of this approach is that it can't be done after the files have been committed
 to ``git`` or ``git-annex`` (i.e. after running ``datalad save``), because then the files'
-state would have changed to ``clean``, as with any other previously commited files in the
+state would have changed to ``clean``, as with any other previously committed files in the
 dataset.
 
 In addition to ``datalad status``, other shell tools can also be used to streamline the
