@@ -78,7 +78,6 @@ To demonstrate, we can create a new dataset and add the new RIA store as a sibli
     configure-sibling (ok: 1)
     create-sibling-ria (ok: 1)
     update (ok: 1)
-  0.00 [00:00, ?/s]
 
   $ datalad push --to ria
   copy(ok): file.txt (file) [to ria-storage...]
