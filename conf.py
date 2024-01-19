@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'PsyInf Knowledge Base'
-copyright = '2023, PsyInf group'
+copyright = '2023, PsyInf group; licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/'
 author = 'PsyInf group'
 
 # -- General configuration ---------------------------------------------------
