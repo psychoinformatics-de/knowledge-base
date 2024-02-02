@@ -1,3 +1,5 @@
+.. _0024:
+
 .. index::
    single: RIA; archive
 .. highlight:: console
