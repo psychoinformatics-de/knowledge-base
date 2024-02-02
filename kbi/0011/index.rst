@@ -74,7 +74,7 @@ In this instance, it turned out that although the conda environment
 was activated (and pip installed both DataLad and DataLad-next into
 that environment), the homebrew-installed DataLad was higher in the
 ``PATH``. Because the user preferred working with that conda environment,
-the problem was resoved by uninstalling homebrew-DataLad and relying
+the problem was resolved by uninstalling homebrew-DataLad and relying
 on conda to provide DataLad and DataLad-Next.
 
 Conflicting Python versions on Windows
