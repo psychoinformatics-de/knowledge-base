@@ -20,7 +20,7 @@ rendered in HTML format by running `make html` in the root of the repository
 - Create a new subdirectory in `kbi/` with a zero-padded integer name
   (length-4) that matches the successor of the "highest" present directory
   (check active PRs for possible conflicts)
-- Pick the best matching template from the `protoypes/` directory, and copy it
+- Pick the best matching template from the `prototypes/` directory, and copy it
   into the new subdirectory as `index.rst`
 - Edit as necessary and propose a PR
 
