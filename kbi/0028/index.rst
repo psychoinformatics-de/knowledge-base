@@ -219,3 +219,36 @@ If a share link is not password protected, the webdav access via
 ``public.php/webdav`` can still be used. However, this requires
 creating a DataLad credential with the token as username, and a
 nonempty password (e.g. a single space or ``xyz``) that would not be used.
+
+
+Caveats of sharing via public link
+----------------------------------
+
+When sharing datasets via the ``public.php/webdav`` path, data *providers* need to ensure write permissions on the share:
+
+.. image:: ./share-permissions.png
+   :width: 50%
+
+Otherwise, data *consumers* will fail to ``clone`` the dataset, as git-annex requires a brief, temporary edit when interacting with the special remote.
+
+In order to clone, *consumers* need to use the public link and password instead of their own webdav credentials:
+
+.. code-block::
+
+   export WEBDAV_USERNAME='<LAST-PART-OF-PUBLIC-LINK>'
+   export WEBDAV_PASSWORD='<SHARE-PASSWORD>'
+
+
+For example, if the public link is ``https://my-webdav-instance.com/s/fKTtnEIqFNP5Eia``, the ``WEBDAV_USERNAME`` variable should be set to ``fKTtnEIqFNP5Eia``.
+
+Finally, as storage siblings to WEBDav services are not autoenabled, either the *consumer* or the *producer* should take care to enable it.
+However, as the URL behind the storage sibling created by the producer (following the pattern ``/remote.php/dav/files/<USERNAME>``) is different from the public URL the dataset is shared with (following the pattern ``.../public.php/webdav``), enabling this special remote and file retrieval would fail for a consumer (unless they had the producer's credentials).
+To circumvent this, a second special remote with the public URL but otherwise identical properties needs to be initialized:
+
+.. code-block::
+
+   git annex initremote sciebo-storage-public --sameas sciebo-storage type=webdav exporttree=yes encryption=none url=https://fz-juelich.sciebo.de/public.php/webdav
+
+
+In the above call, ``webdav-storage-public`` is a new special remote, set up   ``sameas`` the previous ``webdav-storage`` special remote that was created with the producer's initial ```create-sibling-webdav`` call.
+After this has been set up (and pushed), the special remote ``webdav-storage-public`` can be enabled after cloning with the credentials from the public link.
