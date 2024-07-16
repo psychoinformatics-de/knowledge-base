@@ -251,4 +251,4 @@ To circumvent this, a second special remote with the public URL but otherwise id
 
 
 In the above call, ``webdav-storage-public`` is a new special remote, set up   ``sameas`` the previous ``webdav-storage`` special remote that was created with the producer's initial ```create-sibling-webdav`` call.
-After this has been set up, the special remote ``webdav-storage-public`` can be enabled after cloning with the credentials from the public link.<
+After this has been set up (and pushed), the special remote ``webdav-storage-public`` can be enabled after cloning with the credentials from the public link.
