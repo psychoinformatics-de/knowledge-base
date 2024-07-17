@@ -25,3 +25,13 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_logo = '_static/logo.png'
 html_title = ''
+
+# see https://about.readthedocs.com/blog/2024/07/addons-by-default/ for the
+# reasoning behind the following:
+import os
+html_context = {}
+# Set canonical URL from the Read the Docs Domain
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+# Tell Jinja2 templates the build is running on Read the Docs
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
