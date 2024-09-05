@@ -161,6 +161,8 @@ For similar reasons, we do not recommend using the ``*`` wildcard
 value to declare all directories as safe, although it remains a
 possibility for users dealing with a very large number of such
 repositories.
+A less sweeping alternative is available starting with Git version 2.46.
+From this version onward, the ``safe.directory`` configuration also accepts a leading path match, such that users could declare all repositories under a specific path as "safe" (e.g., ``git config --global --add safe.directory /data/projects/*``).
 
 Like any global Git configuration, it is written to the user's
 configuration file (typically ``$HOME/.gitconfig``), and its current
