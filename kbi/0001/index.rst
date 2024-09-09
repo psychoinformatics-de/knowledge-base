@@ -41,8 +41,9 @@ Git version 2.35.2 introduced checks for the top-level directory
 ownership, and a ``safe.directory`` config option to to bypass these
 checks. The changes were also added as patches for minor versions from
 2.30 (2.30.3) onwards. Description of the config option can be found
-in `git config docs <https://git-scm.com/docs/git-config>`__ (Ctrl-F
-``safe.directory``), and begins as follows:
+in `git config docs
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-safedirectory>`__,
+and begins as follows:
 
    These config entries specify Git-tracked directories that are
    considered safe even if they are owned by someone other than the
@@ -138,9 +139,11 @@ institutes as an example:
        We are particularly careful to provide a helpful message to any user
        trying to use a shared repository.
 
-Later changes, citing feedback from users who have a very large list of
-shared repositories, introduced the possibility to set the value of the
-config option to ``*``, implying that all directories are safe.
+Later changes [2]_, [3]_, citing feedback from users who have a very
+large list of shared repositories, introduced the possibility to set
+the value of the config option to ``*``, implying that all directories
+are safe; or to a directory ending with ``/*``, implying all
+repositories under the given directories are safe.
 
 Recommendation
 --------------
@@ -186,3 +189,13 @@ shared bare repository / `RIA store`_.
    Found by ``git log Documentation/config/safe.txt`` in a clone of git
    repository; can be also seen in
    https://github.com/git/git/commits/v2.37.0/Documentation/config/safe.txt
+
+.. [2]
+   See `2.30.4 Release notes <https://github.com/git/git/blob/master/Documentation/RelNotes/2.30.4.txt>`_
+   and `related commit <https://github.com/git/git/commit/0f85c4a30b072a26d74af8bbf63cc8f6a5dfc1b8>`_
+   in Git Source Code Mirror.
+
+.. [3]
+   See `2.46.0 Release notes <https://github.com/git/git/blob/master/Documentation/RelNotes/2.46.0.txt>`_
+   and `commit introducing change <https://github.com/git/git/commit/313eec177a>`_
+   in Git Source Code Mirror.
