@@ -10,7 +10,7 @@ KBI0032: Pushing to RIA-store between OSs, and other improvements
 :keywords: datalad-next, RIA, macOS, linux, windows, cross-platform
 :software-versions: datalad-next_1.4.1, datalad_1.0.2
 
-DataLad versions prior to at least 1.0.2 [#f1]_ can display the
+DataLad versions prior to 1.1.2 can display the
 following error when pushing to a RIA store from macOS to a linux
 server [#f2]_:
 
@@ -40,10 +40,6 @@ config --global --add datalad.extensions.load next``) after
 installation to allow it to override default DataLad behavior.
 
 .. rubric:: Footnotes
-
-.. [#f1] At the moment of writing it is not known if and when a fix
-         will be included in the core DataLad package. A `pull
-         request`_ has been proposed.
 .. [#f2] Reported e.g. in this `GitHub issue`_ and this `Neurostars
          thread`_, which prompted this KBI.
 .. [#f3] At the moment of writing, the latest version available in
